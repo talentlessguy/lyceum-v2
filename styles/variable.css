@@ -1,0 +1,9 @@
+.shadow {
+  box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+}
+
+.border {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: black;
+}

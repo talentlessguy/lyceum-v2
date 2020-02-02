@@ -1,0 +1,18 @@
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post span {
+  padding: 2em;
+  text-align: justify;
+}
+
+.imageSet {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.post img {
+  width: 100%;
+}

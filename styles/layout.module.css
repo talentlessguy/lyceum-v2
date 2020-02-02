@@ -1,0 +1,62 @@
+.nav_bar {
+  composes: border from './variable.css';
+  height: auto;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0.7em;
+  background-color: #ffffff;
+}
+
+.nav_bar a {
+  color: black;
+  line-height: 1.5;
+  font-size: 0.8em;
+  margin-right: 1em;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: row;
+  grid-template-columns: 0.2fr 3fr 0.2fr;
+}
+
+.sidebar {
+  composes: border from './variable.css';
+  width: 8rem;
+  height: auto;
+  padding: 1em;
+}
+.sidebar img {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.sidebar_right {
+  right: 0;
+}
+
+.main {
+  width: 100%;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.main h1 {
+  padding-left: 2rem;
+  font-size: calc(100vw / 25);
+}

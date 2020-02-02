@@ -1,0 +1,48 @@
+.slide_container {
+  position: relative;
+  user-select: none;
+}
+
+.slide_container h1 {
+  font-size: calc(100vw / 12.5);
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+}
+
+.slide_container span {
+  font-weight: 500;
+}
+
+.image_first {
+  background-image: url('http://liceym2.ru/images/FOTO_2019_2020/Blokadniu_xleb1.jpg');
+}
+
+.image_second {
+  background-image: url('http://liceym2.ru/images/FOTO_2019_2020/Konkyrs_mysei.jpg');
+}
+
+.slides {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image {
+  background-size: cover;
+  background-position-y: center;
+  height: 100vh;
+  width: 100%;
+  background-blend-mode: darken;
+  background-color: rgba(3, 8, 22, 0.6);
+}
+
+.box {
+  position: absolute;
+  top: calc(100% / 5);
+  left: calc(100vw / 30);
+  display: flex;
+  align-items: baseline;
+  color: #d3eeee;
+  flex-direction: column;
+  justify-content: center;
+}
