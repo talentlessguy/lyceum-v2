@@ -26,6 +26,15 @@ const CustomApp = ({ Component, pageProps }) => (
     </style>
     <Head>
       <title>МБОУ Лицей №2</title>
+      <meta
+        name="description"
+        content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
+      />
+      <meta
+        name="og:description"
+        content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
+      />
+      <meta name="og:locale" content="ru_RU" />
     </Head>
 
     <NavBar />
