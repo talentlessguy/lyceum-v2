@@ -1,17 +1,16 @@
 import React from 'react'
 import { post, imageSet } from '../styles/post.module.css'
 
-const Post = ({ images, text }) => (
+const Post = ({ images, text, heading }) => (
   <div className={post}>
+    <h2>{heading}</h2>
     <div className={imageSet}>
-      {images.map((img, i) => (
-        <figure key={i}>
-          <img src={img} />
-        </figure>
+      {images?.map((img, i) => (
+        <img src={img} key={i} alt={heading} />
       ))}
     </div>
 
-    <span>{text}</span>
+    <article>{text}</article>
   </div>
 )
 

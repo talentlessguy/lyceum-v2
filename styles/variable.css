@@ -3,7 +3,7 @@
 }
 
 .border {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: black;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
 }

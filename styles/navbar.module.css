@@ -1,0 +1,41 @@
+.nav_bar {
+  composes: border from './variable.css';
+  height: auto;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0.7em;
+  background-color: #ffffff;
+}
+
+.nav_bar_hidden {
+  composes: nav_bar;
+  height: unset;
+  text-align: left;
+}
+
+.nav_bar_hidden a {
+  display: none;
+}
+.nav_bar button {
+  border: none;
+  padding: 0.3rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+.nav_bar button:hover {
+  cursor: pointer;
+}
+
+.nav_bar a {
+  color: black;
+  line-height: 1.5;
+  margin: 0.6rem;
+}

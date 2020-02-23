@@ -15,11 +15,19 @@
 }
 
 .image_first {
-  background-image: url('http://liceym2.ru/images/FOTO_2019_2020/Blokadniu_xleb1.jpg');
+  background-image: url('/6.jpg');
+  background-position-y: center;
 }
 
 .image_second {
-  background-image: url('http://liceym2.ru/images/FOTO_2019_2020/Konkyrs_mysei.jpg');
+  background-image: url('/5.jpg');
+
+  background-position-y: center;
+}
+
+.image_third {
+  background-image: url('/4.jpg');
+  background-position-y: top;
 }
 
 .slides {
@@ -29,7 +37,6 @@
 
 .image {
   background-size: cover;
-  background-position-y: center;
   height: 100vh;
   width: 100%;
   background-blend-mode: darken;

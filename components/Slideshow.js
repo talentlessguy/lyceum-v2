@@ -16,7 +16,7 @@ const Slideshow = () => (
   <Slider {...settings} className={slides} data-img="1">
     <div className={`${image} ${styles.image_first}`} />
     <div className={`${image} ${styles.image_second}`} />
-    <div className={image} />
+    <div className={`${image} ${styles.image_third}`} />
   </Slider>
 )
 

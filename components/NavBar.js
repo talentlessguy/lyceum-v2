@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
-import styles from '../styles/layout.module.css'
+import styles from '../styles/navbar.module.css'
 
 const links = [
   {
@@ -39,9 +39,7 @@ const links = [
   {
     text: 'Информационная безопасность'
   },
-  {
-    text: 'Вход через ЕСИА'
-  },
+
   {
     text: 'проект "Наука в Подмосковье"'
   },
@@ -50,14 +48,21 @@ const links = [
   }
 ]
 
-const NavBar = () => (
-  <nav className={styles.nav_bar}>
-    {links.map(link => (
-      <Link href="">
-        <a>{link.text}</a>
-      </Link>
-    ))}
-  </nav>
-)
+const NavBar = () => {
+  const [visible, setVisible] = useState(false)
+
+  return (
+    <nav className={visible ? styles.nav_bar : styles.nav_bar_hidden}>
+      <button onClick={() => setVisible(!visible)}>{visible ? 'X' : '☰'}</button>
+      {!visible && <strong>Лицей №2</strong>}
+
+      {links.map(link => (
+        <Link href="">
+          <a>{link.text}</a>
+        </Link>
+      ))}
+    </nav>
+  )
+}
 
 export default NavBar
