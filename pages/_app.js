@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
 import 'slick-carousel/slick/slick.css'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 const CustomApp = ({ Component, pageProps }) => (
@@ -12,6 +13,7 @@ const CustomApp = ({ Component, pageProps }) => (
         html {
           margin: 0;
           height: 100%;
+          overflow-x: hidden;
         }
         @import url('https://rsms.me/inter/inter.css');
         html {

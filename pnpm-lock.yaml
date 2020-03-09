@@ -3,6 +3,7 @@ dependencies:
   react: 16.12.0
   react-dom: 16.12.0_react@16.12.0
   react-slick: 0.25.2_react-dom@16.12.0+react@16.12.0
+  react-super-responsive-table: 5.1.1_react-dom@16.12.0+react@16.12.0
   slick-carousel: 1.8.1
 devDependencies:
   '@types/react': 16.9.22
@@ -4852,6 +4853,16 @@ packages:
       react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0
     resolution:
       integrity: sha512-8MNH/NFX/R7zF6W/w+FS5VXNyDusF+XDW1OU0SzODEU7wqYB+ZTGAiNJ++zVNAVqCAHdyCybScaUB+FCZOmBBw==
+  /react-super-responsive-table/5.1.1_react-dom@16.12.0+react@16.12.0:
+    dependencies:
+      react: 16.12.0
+      react-dom: 16.12.0_react@16.12.0
+    dev: false
+    peerDependencies:
+      react: ^16.9.0
+      react-dom: ^16.9.0
+    resolution:
+      integrity: sha512-YKynBZSUA4QcN+CJgQYvb4RSv8eXHO/8J2cJPAycW5DwdENRd0KgtE7myclnjQeDMxafiFTDILV73DIX2fRRXw==
   /react/16.12.0:
     dependencies:
       loose-envify: 1.4.0
@@ -5996,4 +6007,5 @@ specifiers:
   react: ^16.12.0
   react-dom: ^16.12.0
   react-slick: ^0.25.2
+  react-super-responsive-table: ^5.1.1
   slick-carousel: ^1.8.1

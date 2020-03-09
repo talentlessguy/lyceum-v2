@@ -4,25 +4,27 @@ import styles from '../styles/navbar.module.css'
 
 const links = [
   {
-    text: 'Основные сведения'
+    text: 'Основные сведения',
+    href: '/summary'
   },
   {
-    text: 'Руководство'
+    text: 'Достижения',
+    href: '/achievements'
   },
   {
-    text: 'Условия'
+    text: 'О МБОУ Лицей №2',
+    href: '/about'
   },
   {
     text: 'Деятельность'
   },
   {
-    text: 'ЕГЭ, ОГЭ'
+    text: 'Доступная среда',
+    href: '/env'
   },
   {
-    text: 'Доступная среда'
-  },
-  {
-    text: 'Учительская'
+    text: 'Учительская',
+    href: '/teachers'
   },
   {
     text: 'Комплексная безопасность'
@@ -54,11 +56,17 @@ const NavBar = () => {
   return (
     <nav className={visible ? styles.nav_bar : styles.nav_bar_hidden}>
       <button onClick={() => setVisible(!visible)}>{visible ? 'X' : '☰'}</button>
-      {!visible && <strong>Лицей №2</strong>}
+      {!visible && (
+        <Link href="/">
+          <a>
+            <strong>Лицей №2</strong>
+          </a>
+        </Link>
+      )}
 
       {links.map(link => (
-        <Link href="">
-          <a>{link.text}</a>
+        <Link href={link.href || ''}>
+          <a className={styles.link}>{link.text}</a>
         </Link>
       ))}
     </nav>

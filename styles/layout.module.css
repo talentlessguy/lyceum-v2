@@ -24,16 +24,17 @@
 }
 
 .main {
-  width: 100%;
+  padding: 2em;
   border-top: 2px solid black;
 }
 
 .feed {
   display: grid;
+  gap: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .main {
     grid-column: 1 / 4;
   }
@@ -51,6 +52,14 @@
 }
 
 .main h1 {
-  padding-left: 2rem;
   font-size: calc(2vw + 2em);
+}
+.main table {
+  font-size: calc(0.6em + 0.3vw);
+}
+
+.main h1,
+.main h2,
+.main h3 {
+  text-align: center;
 }

@@ -1,9 +1,8 @@
 .nav_bar {
   composes: border from './variable.css';
   height: auto;
-  position: fixed;
+  position: sticky;
   align-items: center;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   top: 0;
@@ -19,7 +18,7 @@
   text-align: left;
 }
 
-.nav_bar_hidden a {
+.nav_bar_hidden a.link {
   display: none;
 }
 .nav_bar button {
@@ -34,8 +33,17 @@
   cursor: pointer;
 }
 
-.nav_bar a {
+.link {
   color: black;
   line-height: 1.5;
   margin: 0.6rem;
+}
+
+.nav_bar_hidden a:not(.link) {
+  text-decoration: none;
+  color: black;
+}
+
+.nav_bar_hidden a:not(.link):hover {
+  text-decoration: underline;
 }
