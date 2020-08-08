@@ -24,18 +24,15 @@ const CustomApp = ({ Component, pageProps }) => (
             font-family: 'Inter var', sans-serif;
           }
         }
+        * {
+          border-collapse: collapse;
+        }
       `}
     </style>
     <Head>
       <title>МБОУ Лицей №2</title>
-      <meta
-        name="description"
-        content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
-      />
-      <meta
-        name="og:description"
-        content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
-      />
+      <meta name="description" content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область" />
+      <meta name="og:description" content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область" />
       <meta name="og:locale" content="ru_RU" />
     </Head>
 

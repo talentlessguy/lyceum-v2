@@ -13,6 +13,7 @@
   height: auto;
   padding: 1em;
 }
+
 .sidebar img {
   width: 100%;
   margin-bottom: 3em;
@@ -42,6 +43,9 @@
     grid-template-rows: auto auto;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
+  }
+  .sidebar {
+    width: unset;
   }
 }
 

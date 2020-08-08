@@ -5,49 +5,50 @@ import styles from '../styles/navbar.module.css'
 const links = [
   {
     text: 'Основные сведения',
-    href: '/summary'
+    href: '/summary',
   },
   {
     text: 'Достижения',
-    href: '/achievements'
+    href: '/achievements',
   },
   {
     text: 'О МБОУ Лицей №2',
-    href: '/about'
+    href: '/about',
   },
   {
-    text: 'Деятельность'
+    text: 'Деятельность',
+    href: '/activity',
   },
   {
     text: 'Доступная среда',
-    href: '/env'
+    href: '/env',
   },
   {
     text: 'Учительская',
-    href: '/teachers'
+    href: '/teachers',
   },
   {
-    text: 'Комплексная безопасность'
+    text: 'Комплексная безопасность',
   },
   {
-    text: 'Контакты'
+    text: 'Контакты',
   },
   {
-    text: 'Музей'
+    text: 'Музей',
   },
   {
-    text: 'Ваше мнение'
+    text: 'Ваше мнение',
   },
   {
-    text: 'Информационная безопасность'
+    text: 'Информационная безопасность',
   },
 
   {
-    text: 'проект "Наука в Подмосковье"'
+    text: 'проект "Наука в Подмосковье"',
   },
   {
-    text: 'ПФДО'
-  }
+    text: 'ПФДО',
+  },
 ]
 
 const NavBar = () => {
@@ -64,7 +65,7 @@ const NavBar = () => {
         </Link>
       )}
 
-      {links.map(link => (
+      {links.map((link) => (
         <Link href={link.href || ''}>
           <a className={styles.link}>{link.text}</a>
         </Link>

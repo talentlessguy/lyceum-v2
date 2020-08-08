@@ -4,7 +4,7 @@
 }
 
 .slide_container h1 {
-  font-size: calc(100vw / 12.5);
+  font-size: 10vw;
   margin-bottom: 0.2em;
   font-weight: bold;
   letter-spacing: -0.05em;
@@ -12,6 +12,8 @@
 
 .slide_container span {
   font-weight: 500;
+  font-size: calc(1rem + 1vw);
+  width: 80vw;
 }
 
 .image_first {
@@ -45,7 +47,7 @@
 
 .box {
   position: absolute;
-  top: calc(100% / 5);
+  top: calc(100% / 20);
   left: calc(100vw / 30);
   display: flex;
   align-items: baseline;
