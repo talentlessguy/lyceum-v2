@@ -16,7 +16,7 @@ const links = [
     href: '/about',
   },
   {
-    text: 'Деятельность',
+    text: 'Учебная деятельность',
     href: '/activity',
   },
   {

@@ -3,11 +3,13 @@
   width: 100%;
   grid-auto-flow: row;
   grid-template-columns: 0.2fr 3fr 0.2fr;
+  min-height: calc(100vh - 74px - 113px);
 }
 
 .sidebar {
   composes: border from './variable.css';
-
+  border-bottom: none;
+  border-top: none;
   justify-self: left;
   width: 8rem;
   height: auto;
@@ -26,7 +28,6 @@
 
 .main {
   padding: 2em;
-  border-top: 2px solid black;
 }
 
 .feed {

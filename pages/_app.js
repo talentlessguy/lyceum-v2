@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar'
 import 'slick-carousel/slick/slick.css'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import 'slick-carousel/slick/slick-theme.css'
+import Footer from '../components/Footer'
 
 const CustomApp = ({ Component, pageProps }) => (
   <Fragment>
@@ -38,6 +39,7 @@ const CustomApp = ({ Component, pageProps }) => (
 
     <NavBar />
     <Component {...pageProps} />
+    <Footer />
   </Fragment>
 )
 

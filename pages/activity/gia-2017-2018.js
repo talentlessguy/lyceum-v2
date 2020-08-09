@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import Link from 'next/link'
 
 export default function Gia20172018() {
   return (
@@ -14,6 +15,9 @@ export default function Gia20172018() {
           }
         `}
       </style>
+      <Link href="/activity">
+        <a>{'<-'} Назад</a>
+      </Link>
       <h2>ГИА-9</h2>
       <table border="1" cellPadding="10px">
         <thead>
