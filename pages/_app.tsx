@@ -6,8 +6,9 @@ import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../styles/navbar.css'
 import Footer from '../components/Footer'
+import { AppProps } from 'next/app'
 
-const CustomApp = ({ Component, pageProps }) => {
+const CustomApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     console.log(`%cMade by v 1 r t l ✨ ~> https://v1rtl.site`, 'font-size: 20px; color: yellow')
   }, [])

@@ -1,6 +1,6 @@
 import React from 'react'
 import { feed } from '../styles/layout.module.css'
-import { slide_container, box } from '../styles/slider.module.css'
+import * as styles from '../styles/slider.module.css'
 import Slideshow from '../components/Slideshow'
 import Post from '../components/Post'
 import Layout from '../components/Layout'
@@ -8,9 +8,10 @@ import { request } from '../lib/cms'
 
 const Index = ({ allPosts }) => (
   <>
-    <div className={slide_container}>
+    {/* @ts-ignore */}
+    <div className={styles.slider_container}>
       <Slideshow />
-      <div className={box}>
+      <div className={styles.box}>
         <h1>МБОУ Лицей №2</h1>
         <span>муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область</span>
       </div>
@@ -20,7 +21,12 @@ const Index = ({ allPosts }) => (
       <h1>Новости</h1>
       <div className={feed}>
         {allPosts.map(({ content }) => (
-          <Post heading={content[0].heading} images={content[0].pictures.map((p) => p.url)} text={content[0].text} />
+          <Post
+            key={content[0].heading}
+            heading={content[0].heading}
+            images={content[0].pictures.map((p) => p.url)}
+            text={content[0].text}
+          />
         ))}
       </div>
     </Layout>

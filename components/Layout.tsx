@@ -1,5 +1,5 @@
 import React from 'react'
-
+// @ts-ignore
 import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
 
 const leftPics = [
@@ -33,10 +33,10 @@ const rightPics = [
   }
 ]
 
-const Layout = ({ children }) => (
+const Layout = ({ children }: { children: any }) => (
   <div className={grid}>
     <aside className={sidebar}>
-      {leftPics.map(pic => (
+      {leftPics.map((pic) => (
         <a href={pic.link}>
           <img src={pic.src} alt={pic.alt} />
         </a>
@@ -44,7 +44,7 @@ const Layout = ({ children }) => (
     </aside>
     <main className={main}>{children}</main>
     <aside className={`${sidebar} ${sidebar_right}`}>
-      {rightPics.map(pic => (
+      {rightPics.map((pic) => (
         <a href={pic.link}>
           <img src={pic.src} alt={pic.alt} />
         </a>

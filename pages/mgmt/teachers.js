@@ -115,8 +115,8 @@ const Teachers = () => (
         name="Людмила Ивановна Иващенко"
         src="https://img-fotki.yandex.ru/get/41717/227958524.f/0_1e1a93_d396e4b0_L.jpg"
       >
-        образование высшее педагогическое директор МБОУ "Лицей№2" высшей квалификационной категории liceum_2@mail.ru
-        74-47-01
+        образование высшее педагогическое директор МБОУ &rdquo;Лицей№2&rdquo; высшей квалификационной категории
+        liceum_2@mail.ru 74-47-01
       </Portrait>
 
       <Portrait
@@ -138,13 +138,17 @@ const Teachers = () => (
         года
       </Portrait>
       {teachers.map(({ text, ...teacher }) => (
-        <Portrait {...teacher}>{text}</Portrait>
+        <Portrait key={teacher.name} {...teacher}>
+          {text}
+        </Portrait>
       ))}
     </div>
     <h2 className={styles.heading}>Учителя начальной ступени образования</h2>
     <div className={styles.teachersGrid}>
       {introTeachers.map(({ text, ...teacher }) => (
-        <Portrait {...teacher}>{text}</Portrait>
+        <Portrait key={teacher.name} {...teacher}>
+          {text}
+        </Portrait>
       ))}
     </div>
   </Layout>
