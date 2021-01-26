@@ -4,9 +4,9 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import styles from '../../styles/mgmt/adm.module.css'
 
-const Portrait = ({ src, children, name, role }) => (
-  <figure className={clsx(styles.portrait, styles[role])}>
-    <Image layout="fixed" width={200} height={300} objectFit="contain" src={src} />
+export const Portrait = ({ src, children, name, role, width = 200, height = 300 }) => (
+  <figure className={clsx(styles.portrait, role ? styles[role] : '')}>
+    <Image layout="fixed" objectFit="contain" {...{ width, height, src }} />
     <figcaption>
       <strong>{name}</strong>
       {children}

@@ -37,3 +37,7 @@
 .right {
   grid-area: right;
 }
+
+.top {
+  grid-area: top;
+}

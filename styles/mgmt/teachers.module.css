@@ -1,0 +1,12 @@
+.teachersGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    'top top top'
+    '. . .';
+}
+
+.heading {
+  text-transform: uppercase;
+  text-align: center;
+}
