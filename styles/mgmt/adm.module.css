@@ -1,0 +1,39 @@
+.admGrid {
+  display: grid;
+  grid-template-areas: '. master .' 'left center right';
+  grid-auto-rows: 1fr;
+  place-items: center;
+}
+
+.portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: center;
+}
+
+.portrait figcaption {
+  padding: 10px 0;
+  display: inherit;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.8rem;
+  max-width: 200px;
+}
+
+.dungeon_master {
+  grid-area: master;
+}
+
+.left {
+  grid-area: left;
+}
+
+.center {
+  grid-area: center;
+}
+
+.right {
+  grid-area: right;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { grid, sidebar, main, feed, sidebar_right } from '../styles/layout.module.css'
+import { feed } from '../styles/layout.module.css'
 import { slide_container, box } from '../styles/slider.module.css'
 import Slideshow from '../components/Slideshow'
 import Post from '../components/Post'

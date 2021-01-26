@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar'
 import 'slick-carousel/slick/slick.css'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import 'slick-carousel/slick/slick-theme.css'
+import '../styles/navbar.css'
 import Footer from '../components/Footer'
 
 const CustomApp = ({ Component, pageProps }) => (
@@ -32,8 +33,14 @@ const CustomApp = ({ Component, pageProps }) => (
     </style>
     <Head>
       <title>МБОУ Лицей №2</title>
-      <meta name="description" content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область" />
-      <meta name="og:description" content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область" />
+      <meta
+        name="description"
+        content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
+      />
+      <meta
+        name="og:description"
+        content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
+      />
       <meta name="og:locale" content="ru_RU" />
     </Head>
 
