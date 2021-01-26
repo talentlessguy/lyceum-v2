@@ -47,7 +47,7 @@ export async function getStaticProps() {
     variables: { limit: 10 }
   })
   return {
-    props: { ...data }
+    props: data
   }
 }
 

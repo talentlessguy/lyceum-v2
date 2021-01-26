@@ -83,6 +83,27 @@ const introTeachers = [
     
     стаж работы 39 года`,
     src: 'http://liceym2.ru/images/FOTO2018/Dikun.jpg'
+  },
+  {
+    name: 'Клемешова Лидия Петровна',
+    text: `учитель начальных классов
+
+    образование высшее педагогическое
+    
+    высшей квалификационной категории
+    стаж работы 35 лет`,
+    src: 'https://img-fotki.yandex.ru/get/67504/227958524.a/0_1ba6cb_16f07d2_L.jpg'
+  },
+  {
+    name: 'Коваленко Екатерина Викторовна',
+    text: `учитель начальных классов
+
+    образование высшее педагогическое
+   
+    первой квалификационной категории
+   
+    стаж работы 4 года`,
+    src: 'https://img-fotki.yandex.ru/get/114758/227958524.13/0_1fd894_7464e9ae_L.jpg'
   }
 ]
 
@@ -117,13 +138,13 @@ const Teachers = () => (
         года
       </Portrait>
       {teachers.map(({ text, ...teacher }) => (
-        <Portrait {...teacher}>{teacher.text}</Portrait>
+        <Portrait {...teacher}>{text}</Portrait>
       ))}
     </div>
     <h2 className={styles.heading}>Учителя начальной ступени образования</h2>
-    <div>
+    <div className={styles.teachersGrid}>
       {introTeachers.map(({ text, ...teacher }) => (
-        <Portrait {...teacher}>{teacher.text}</Portrait>
+        <Portrait {...teacher}>{text}</Portrait>
       ))}
     </div>
   </Layout>
