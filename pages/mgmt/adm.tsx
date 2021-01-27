@@ -1,10 +1,24 @@
 import clsx from 'clsx'
 import Image from 'next/image'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Layout from '../../components/Layout'
 import styles from '../../styles/mgmt/adm.module.css'
 
-export const Portrait = ({ src, children, name, role, width = 200, height = 300 }) => (
+export const Portrait = ({
+  src,
+  children,
+  name,
+  role,
+  width = 200,
+  height = 300
+}: {
+  src: string
+  children: ReactNode
+  name: string
+  width?: number
+  height?: number
+  role?: string
+}) => (
   <figure className={clsx(styles.portrait, role ? styles[role] : '')}>
     <Image layout="fixed" objectFit="contain" {...{ width, height, src }} />
     <figcaption>
@@ -22,8 +36,8 @@ const Adm = () => (
         name="Людмила Ивановна Иващенко"
         src="https://img-fotki.yandex.ru/get/41717/227958524.f/0_1e1a93_d396e4b0_L.jpg"
       >
-        образование высшее педагогическое директор МБОУ "Лицей№2" высшей квалификационной категории liceum_2@mail.ru
-        74-47-01
+        образование высшее педагогическое директор МБОУ &quot;Лицей№2&quot; высшей квалификационной категории
+        liceum_2@mail.ru 74-47-01
       </Portrait>
       <div />
       <Portrait

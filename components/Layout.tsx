@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 // @ts-ignore
 import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
 
@@ -33,11 +33,11 @@ const rightPics = [
   }
 ]
 
-const Layout = ({ children }: { children: any }) => (
+const Layout = ({ children }: { children: ReactNode }) => (
   <div className={grid}>
     <aside className={sidebar}>
       {leftPics.map((pic) => (
-        <a href={pic.link}>
+        <a href={pic.link} key={pic.alt}>
           <img src={pic.src} alt={pic.alt} />
         </a>
       ))}
@@ -45,7 +45,7 @@ const Layout = ({ children }: { children: any }) => (
     <main className={main}>{children}</main>
     <aside className={`${sidebar} ${sidebar_right}`}>
       {rightPics.map((pic) => (
-        <a href={pic.link}>
+        <a href={pic.link} key={pic.alt}>
           <img src={pic.src} alt={pic.alt} />
         </a>
       ))}

@@ -3,7 +3,13 @@ import { Portrait } from './adm'
 import styles from '../../styles/mgmt/teachers.module.css'
 import Layout from '../../components/Layout'
 
-const teachers = [
+type teacher = {
+  name: string
+  text: string
+  src: string
+}
+
+const teachers: teacher[] = [
   {
     name: 'Любимова Татьяна Юрьевна',
     text: ` образование высшее педагогическое
@@ -72,7 +78,7 @@ const teachers = [
   }
 ]
 
-const introTeachers = [
+const introTeachers: teacher[] = [
   {
     name: 'Дикун Людмила Андреевна',
     text: `учитель начальных классов
@@ -104,6 +110,91 @@ const introTeachers = [
    
     стаж работы 4 года`,
     src: 'https://img-fotki.yandex.ru/get/114758/227958524.13/0_1fd894_7464e9ae_L.jpg'
+  },
+  {
+    src: 'https://img-fotki.yandex.ru/get/3209/227958524.a/0_1af977_dc7ca6cd_L.jpg',
+    name: 'Краснова Алия Шамилявна',
+    text: ` учитель начальных классов
+
+    образование высшее педагогическое
+   
+   высшей квалификационной категории
+   
+   стаж работы 38 лет`
+  },
+  {
+    src: 'http://liceym2.ru/images/FOTO2018/Kyrinova250.jpg',
+    name: 'Куринова Ирина Анатольевна',
+    text: `учитель начальных классов
+
+    образование высшее педагогическое
+   
+    высшей квалификационной категории
+   
+   стаж работы 35 лет`
+  },
+  {
+    src: 'http://liceym2.ru/images/FOTO2018/Kycherova.jpg',
+    name: 'Кучерова Любовь Алексевна',
+    text: `учитель начальных классов
+
+    образование высшее педагогическое
+   
+    высшей квалификационной категории
+   
+   стаж работы 44 года`
+  },
+  {
+    src: 'https://img-fotki.yandex.ru/get/15549/227958524.3/0_174f8d_c64d3a49_L.jpg',
+    name: 'https://img-fotki.yandex.ru/get/15549/227958524.3/0_174f8d_c64d3a49_L.jpg',
+    text: `учитель начальных классов
+
+    образование высшее
+   педагогическое
+   
+   высшей квалификационной категории
+   
+   стаж работы 30 лет`
+  },
+  {
+    src: 'https://img-fotki.yandex.ru/get/3906/227958524.a/0_1af979_1ada77b7_L.jpg',
+    name: 'Тимофеева Марина Анатольевна',
+    text: `учитель начальных классов 
+
+    образование высшее педагогическое
+   
+    высшей квалификационной категории
+   
+   стаж работы 32 года`
+  },
+  {
+    src: 'http://liceym2.ru/images/JPG/FOTO/chernyshova2.jpg',
+    name: 'Чернышова Любовь Александровна',
+    text: `учитель начальных классов
+
+    образование высшее педагогическое
+    
+    высшей квалификационной категории
+    
+    стаж работы 40 лет`
+  }
+]
+
+const midTeachers: teacher[] = [
+  {
+    src: 'http://liceym2.ru/images/FOTO_2020_2021/Andriyashkin.jpg',
+    name: 'Андрияшкин Артём Алексеевич',
+    text: `образование среднее профессиональное 
+учитель физической культуры
+ стаж работы 3 года`
+  },
+  {
+    src: 'http://liceym2.ru/images/FOTO2018/Babelskaya.jpg',
+    name: 'Бабельская Людмила Васильевна',
+    text: ` образование высшее педагогическое
+    учитель русского языка и литературы
+    высшей квалификационной категории
+    стаж работы 51 год`
   }
 ]
 
@@ -146,6 +237,14 @@ const Teachers = () => (
     <h2 className={styles.heading}>Учителя начальной ступени образования</h2>
     <div className={styles.teachersGrid}>
       {introTeachers.map(({ text, ...teacher }) => (
+        <Portrait key={teacher.name} {...teacher}>
+          {text}
+        </Portrait>
+      ))}
+    </div>
+    <h2>Учителя основной и средней ступени образования</h2>
+    <div className={styles.teachersGrid}>
+      {midTeachers.map(({ text, ...teacher }) => (
         <Portrait key={teacher.name} {...teacher}>
           {text}
         </Portrait>

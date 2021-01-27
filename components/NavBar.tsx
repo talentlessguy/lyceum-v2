@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import NextLink from 'next/link'
+import React, { ReactNode, useEffect, useState } from 'react'
+import NextLink, { LinkProps } from 'next/link'
 import { MultiLevelNavbar } from 'react-multi-level-nav'
 import 'react-multi-level-nav/dist/defaultStyles.css'
-import clsx from 'clsx'
 
 const links = {
   summary: [
@@ -87,13 +86,23 @@ const links = {
   ]
 }
 
-const Link = (props) => (
+const Link = (
+  props: LinkProps & {
+    children: ReactNode
+    href: string
+  }
+) => (
   <NextLink {...props}>
     <a href={props.href}>{props.children}</a>
   </NextLink>
 )
 
-const mapLinks = (links) =>
+const mapLinks = (
+  links: {
+    text: string
+    href: string
+  }[]
+) =>
   links.map((l) => (
     <Link href={l.href} key={l.text}>
       {l.text}
