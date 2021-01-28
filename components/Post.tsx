@@ -7,10 +7,10 @@ const Post = ({
   heading,
   imageProps
 }: {
-  images: any[]
+  images: string[]
   text: string
   heading: string
-  imageProps?: any
+  imageProps?: unknown
 }) => (
   <div className={post}>
     <h2>{heading}</h2>
