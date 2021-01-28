@@ -40,6 +40,7 @@
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  padding: 2rem;
 }
 
 @media (max-width: 800px) {
