@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: baseline center;
+  padding: 2rem;
+}
+
+.grid div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+}
