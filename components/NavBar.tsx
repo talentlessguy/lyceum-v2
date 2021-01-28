@@ -16,6 +16,10 @@ const links = {
     {
       text: 'Достижения',
       href: '/achievements'
+    },
+    {
+      text: 'Атрибуты и символилка',
+      href: '/identity'
     }
   ],
   mgmt: [
@@ -113,11 +117,11 @@ const NavBar = () => {
   const [vis, set] = useState(true)
 
   useEffect(() => {
-    const listener = window.addEventListener('resize', () => {
-      if (window.innerWidth > 1500) {
-        set(true)
-      }
-    })
+    const listener = () => {
+      set(window.innerWidth > 1500)
+    }
+
+    window.addEventListener('resize', listener)
 
     return () => window.removeEventListener('resize', listener)
   }, [])

@@ -30,6 +30,12 @@
   padding: 2em;
 }
 
+.main p,
+.main strong,
+.main a {
+  line-height: 1.75;
+}
+
 .feed {
   display: grid;
   gap: 4rem;

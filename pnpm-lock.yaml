@@ -1,4 +1,5 @@
 dependencies:
+  '@openfonts/inter_cyrillic': 1.0.2
   clsx: 1.1.1
   graphql: 15.4.0
   graphql-request: 3.4.0_graphql@15.4.0
@@ -202,6 +203,10 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-8Broas6vTtW4GIXTAHDoE32hnN2M5ykgCpWGbuXHQ15vEMqr23pB76e/GZcYsZCHALv50ktd24qhEyKr6wBtow==
+  /@openfonts/inter_cyrillic/1.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-3sBTMLJ1dpOYJmUhQ+JARvOibWafB3tVv6NXGsStIxcjnS/djMY2eqWgRPd9/DzWM8zmCtS4bXVa2RqwMq0VKg==
   /@opentelemetry/api/0.14.0:
     dependencies:
       '@opentelemetry/context-base': 0.14.0
@@ -5501,6 +5506,7 @@ packages:
     resolution:
       integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
 specifiers:
+  '@openfonts/inter_cyrillic': ^1.0.2
   '@types/node': ^14.14.22
   '@types/react': ^17.0.0
   '@typescript-eslint/eslint-plugin': ^4.14.1

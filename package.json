@@ -10,6 +10,7 @@
   "author": "v1rtl",
   "license": "ISC",
   "dependencies": {
+    "@openfonts/inter_cyrillic": "^1.0.2",
     "clsx": "^1.1.1",
     "graphql": "^15.4.0",
     "graphql-request": "^3.4.0",

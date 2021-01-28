@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 import 'slick-carousel/slick/slick-theme.css'
 import '../styles/navbar.css'
+import '@openfonts/inter_cyrillic'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
 
@@ -23,7 +24,6 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
             height: 100%;
             overflow-x: hidden;
           }
-          @import url('https://rsms.me/inter/inter.css');
           html {
             font-family: 'Inter', sans-serif;
           }
