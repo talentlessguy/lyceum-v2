@@ -12,12 +12,12 @@
   "dependencies": {
     "@openfonts/inter_cyrillic": "^1.0.2",
     "clsx": "^1.1.1",
-    "graphql": "^15.4.0",
+    "graphql": "^15.5.0",
     "graphql-request": "^3.4.0",
     "next": "^10.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-multi-level-nav": "^0.0.5",
+    "react-multi-level-nav": "^0.0.6",
     "react-slick": "^0.28.0",
     "react-super-responsive-table": "^5.2.0",
     "slick-carousel": "^1.8.1"

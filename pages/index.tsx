@@ -6,7 +6,7 @@ import Post from '../components/Post'
 import Layout from '../components/Layout'
 import { request } from '../lib/cms'
 
-const Index = ({ allPosts }) => (
+const Index = ({ allPosts }: { allPosts: unknown[] }) => (
   <>
     {/* @ts-ignore */}
     <div className={styles.slider_container}>
