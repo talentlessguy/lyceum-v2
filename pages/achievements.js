@@ -37,7 +37,7 @@ const Achievements = () => (
     <h2>За годы работы коллектив МБОУ «Лицей №2» достиг высоких результатов деятельности</h2>
     <div className="list">
       {awards.map(({ pic, text }) => (
-        <Post images={[pic]} text={text} />
+        <Post key={pic} images={[pic]} text={text} />
       ))}
     </div>
   </Layout>

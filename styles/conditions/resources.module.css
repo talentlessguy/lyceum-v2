@@ -1,0 +1,19 @@
+.pics {
+  composes: center from '../layout.module.css';
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  place-items: self-start center;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

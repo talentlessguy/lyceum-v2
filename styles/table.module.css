@@ -1,0 +1,18 @@
+.table {
+  line-height: 1.5;
+  display: table;
+  width: 100%;
+}
+
+.table tr {
+  text-align: left;
+}
+
+.table strong {
+  display: block;
+}
+
+.table td {
+  border: 1px solid black;
+  padding: 1rem;
+}

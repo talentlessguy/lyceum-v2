@@ -40,7 +40,7 @@ const links = {
       text: 'Структура и органы управления'
     },
     {
-      href: '/mgmt/board',
+      href: 'http://liceym2.ru/index.php/rukovodstvo/upravlyayushchij-sovet',
       text: 'Управляющий совет'
     }
   ],
@@ -147,7 +147,7 @@ const NavBar = () => {
             Музей: <Link href="/museum">Музей</Link>,
             'Частые вопросы': <Link href="/faq">Частые вопросы</Link>,
             ПФДО: <Link href="/pfdo">ПФДО</Link>,
-            'ШСК "Олимп"': <Link href="/olimp">ШСК "Олимп"</Link>,
+            'ШСК "Олимп"': <Link href="/olimp">ШСК &quot;Олимп&quot;</Link>,
             ЦОС: <Link href="/cos">ЦОС</Link>
           }}
           className="nav"

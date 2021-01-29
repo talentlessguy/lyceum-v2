@@ -1,28 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import { table } from '../styles/table.module.css'
 
 const Summary = () => (
   <Layout>
-    <style jsx>
-      {`
-        line-height: 1.5;
-        table {
-          display: table;
-          width: 100%;
-        }
-        h1 {
-          text-align: center;
-        }
-        strong {
-          display: block;
-        }
-        tr {
-          text-align: left;
-        }
-      `}
-    </style>
-    <h1>Сведения о МБОУ "Лицей №2"</h1>
-    <table border="1" cellPadding="10px">
+    <h1>Сведения о МБОУ &quot;Лицей №2&quot;</h1>
+    <table className={table}>
       <tbody>
         <tr>
           <th>Полное наименование в соответствии с лицензией</th>
@@ -34,7 +17,7 @@ const Summary = () => (
           </td>
         </tr>
         <tr>
-          <th>Учредитель МБОУ "Лицей №2"</th>
+          <th>Учредитель МБОУ &quot;Лицей №2&quot;</th>
           <td>
             <p>
               Администрация города Протвино (<a href="http://www.protvino.ru/">http://www.protvino.ru/</a>)
@@ -51,7 +34,8 @@ const Summary = () => (
             <p>ком. 401-3, тел. 8(4967)34-16-65</p>
             <p>прием: среда с 16-00</p>
             <strong>Специалисты отдела:</strong>
-            ком. 401-3, тел. 8(4967)34-16-65 <br /> ком. 401-4, тел. 8(4967)74-69-26, 74-49-39 <br /> ком. 401-2, тел. 8(4967)74-97-40, 8(4967)74-95-89
+            ком. 401-3, тел. 8(4967)34-16-65 <br /> ком. 401-4, тел. 8(4967)74-69-26, 74-49-39 <br /> ком. 401-2, тел.
+            8(4967)74-97-40, 8(4967)74-95-89
           </td>
         </tr>
         <tr>
