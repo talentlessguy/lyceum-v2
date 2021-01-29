@@ -22,6 +22,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
             margin: 0;
             height: 100%;
             overflow-x: hidden;
+            background: white;
           }
           html {
             font-family: 'Inter', sans-serif;
