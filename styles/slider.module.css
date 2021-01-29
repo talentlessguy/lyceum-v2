@@ -39,9 +39,10 @@
 
 .image {
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 51px);
   width: 100%;
   background-blend-mode: darken;
+
   background-color: rgba(3, 8, 22, 0.6);
 }
 
@@ -54,4 +55,17 @@
   color: #d3eeee;
   flex-direction: column;
   justify-content: center;
+}
+
+.learnMoreLink {
+  color: #d3eeee;
+  right: 100px;
+  position: absolute;
+  bottom: 100px;
+  font-weight: 500;
+  font-size: calc(1rem + 1vw);
+}
+
+.learnMoreLink:hover {
+  color: gray;
 }

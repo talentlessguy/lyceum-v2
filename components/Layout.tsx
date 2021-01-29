@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { PropsWithChildren, ReactNode } from 'react'
 // @ts-ignore
 import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
 
@@ -33,8 +33,8 @@ const rightPics = [
   }
 ]
 
-const Layout = ({ children }: { children: ReactNode }) => (
-  <div className={grid}>
+const Layout = ({ children, ...props }: PropsWithChildren) => (
+  <div className={grid} {...props}>
     <aside className={sidebar}>
       {leftPics.map((pic) => (
         <a href={pic.link} key={pic.alt}>

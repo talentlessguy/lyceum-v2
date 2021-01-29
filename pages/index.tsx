@@ -15,9 +15,12 @@ const Index = ({ allPosts }: { allPosts: unknown[] }) => (
         <h1>МБОУ Лицей №2</h1>
         <span>муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область</span>
       </div>
+      <a className={styles.learnMoreLink} href="#news">
+        Новости ↘
+      </a>
     </div>
 
-    <Layout>
+    <Layout id="news">
       <h1>Новости</h1>
       <div className={feed}>
         {allPosts.map(({ content }) => (

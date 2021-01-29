@@ -34,6 +34,8 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
           }
           * {
             border-collapse: collapse;
+
+            scroll-behavior: smooth;
           }
         `}
       </style>
