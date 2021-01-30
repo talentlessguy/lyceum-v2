@@ -49,6 +49,12 @@ const GET_ALL_POSTS = /* GraphQL */ `
         heading
       }
     }
+    allUploads(filter: { tags: { contains: "sidebar" } }) {
+      url
+      width
+      height
+      filename
+    }
   }
 `
 

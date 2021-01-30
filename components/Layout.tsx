@@ -1,57 +1,76 @@
 import React, { PropsWithChildren } from 'react'
 // @ts-ignore
 import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
-import img1 from '../public/banner2.jpg'
-import img2 from '../public/banner3.png'
-import img3 from '../public/gosuslug.jpg'
-import img4 from '../public/banner1.jpg'
-import img5 from '../public/russian_electronic_school.jpg'
+import Image from 'next/image'
 
-const leftPics = [
+const pics = [
   {
-    src: img1,
-    alt: 'Мин обр и науки РФ',
-    link: 'https://minobrnauki.gov.ru/'
-  },
-  {
-    src: img2,
+    filename: 'banner3.png',
+    width: 112,
+    height: 151,
+    url: 'https://www.datocms-assets.com/39473/1612042036-banner3.png',
     alt: 'Мин обр МО',
-    link: 'https://mo.mosreg.ru/'
-  }
-]
-
-const rightPics = [
-  {
-    src: img3,
-    alt: 'Госуслуги',
-    link: 'https://www.gosuslugi.ru/'
+    customData: {
+      link: 'https://mo.mosreg.ru'
+    }
   },
   {
-    src: img4,
-    link: 'https://telefon-doveria.ru/',
-    alt: 'Психологическая помощь'
+    filename: 'banner2.jpg',
+    width: 225,
+    height: 225,
+    url: 'https://www.datocms-assets.com/39473/1612041296-banner2.jpg',
+    alt: 'Мин обр и науки РФ',
+    customData: {
+      link: 'https://minobrnauki.gov.ru/'
+    }
   },
   {
-    src: img5,
+    filename: 'russianelectronicschool.jpg',
+    width: 1597,
+    height: 960,
+    url: 'https://www.datocms-assets.com/39473/1612042193-russianelectronicschool.jpg',
     alt: 'Российская электронная школа',
-    link: 'https://resh.edu.ru/'
+    customData: {
+      link: 'https://resh.edu.ru/'
+    }
+  },
+  {
+    filename: 'gosuslug.jpg',
+    width: 423,
+    height: 276,
+    url: 'https://www.datocms-assets.com/39473/1612042048-gosuslug.jpg',
+    alt: 'Госуслуги',
+    customData: {
+      link: 'https://www.gosuslugi.ru'
+    }
+  },
+
+  {
+    filename: 'banner1.jpg',
+    width: 1181,
+    height: 661,
+    url: 'https://www.datocms-assets.com/39473/1612041503-banner1.jpg',
+    alt: 'Психологическая помощь',
+    customData: {
+      link: 'https://telefon-doveria.ru/'
+    }
   }
 ]
 
 const Layout = ({ children, ...props }: PropsWithChildren<unknown>) => (
   <div className={grid} {...props}>
     <aside className={sidebar}>
-      {leftPics.map((pic) => (
-        <a href={pic.link} key={pic.alt}>
-          <img src={pic.src} alt={pic.alt} />
+      {pics.slice(0, 2).map((pic) => (
+        <a href={pic.customData.link} key={pic.alt}>
+          <Image objectFit="contain" quality={50} src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} />
         </a>
       ))}
     </aside>
     <main className={main}>{children}</main>
     <aside className={`${sidebar} ${sidebar_right}`}>
-      {rightPics.map((pic) => (
-        <a href={pic.link} key={pic.alt}>
-          <img src={pic.src} alt={pic.alt} />
+      {pics.slice(2, 5).map((pic) => (
+        <a href={pic.customData.link} key={pic.alt}>
+          <Image objectFit="contain" quality={50} src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} />
         </a>
       ))}
     </aside>

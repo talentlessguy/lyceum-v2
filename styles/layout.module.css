@@ -16,9 +16,10 @@
   padding: 1em;
 }
 
-.sidebar img {
-  width: 100%;
-  margin-bottom: 3em;
+.sidebar a {
+  margin: 1rem 0;
+  display: block;
+  height: max-content;
 }
 
 .sidebar_right {
