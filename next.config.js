@@ -1,4 +1,7 @@
-module.exports = {
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const wImages = require('next-images')
+
+module.exports = wImages({
   images: {
     domains: ['img-fotki.yandex.ru', 'liceym2.ru']
   },
@@ -12,4 +15,4 @@ module.exports = {
   experimental: {
     modern: true
   }
-}
+})
