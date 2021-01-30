@@ -6,6 +6,7 @@ import styles from '../../styles/mgmt/adm.module.css'
 
 const Adm = () => (
   <Layout>
+    <h1>Руководство</h1>
     <div className={styles.admGrid}>
       {adm.map((item) => (
         <Portrait {...item} key={item.name} />

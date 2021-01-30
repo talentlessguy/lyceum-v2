@@ -2,7 +2,13 @@
   display: grid;
   grid-template-areas: '. master .' 'left center right';
   grid-auto-rows: 1fr;
-  place-items: center;
+  place-items: baseline center;
+}
+
+@media (max-width: 1400px) {
+  .admGrid {
+    grid-template-areas: 'master left' 'center right';
+  }
 }
 
 .portrait {
