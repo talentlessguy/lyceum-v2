@@ -36,6 +36,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
       </style>
       <Head>
         <title>МБОУ Лицей №2</title>
+        <link rel="favicon" type="image/png" href="/icon.png" />
         <meta
           name="description"
           content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
