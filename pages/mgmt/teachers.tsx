@@ -1,5 +1,5 @@
 import React from 'react'
-import { Portrait } from './adm'
+import { Portrait } from '../../components/Portrait'
 import styles from '../../styles/mgmt/teachers.module.css'
 import Layout from '../../components/Layout'
 
