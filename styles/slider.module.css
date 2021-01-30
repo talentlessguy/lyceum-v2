@@ -1,6 +1,7 @@
 .slider_container {
   position: relative;
   user-select: none;
+  height: calc(100vh - 51px);
 }
 
 .slider_container h1 {
