@@ -41,7 +41,7 @@ const GET_ALL_POSTS = /* GraphQL */ `
     allPosts(first: $limit, orderBy: createdAt_ASC) {
       content {
         pictures {
-          url
+          url(imgixParams: { auto: format, q: 80 })
         }
         text
         heading
