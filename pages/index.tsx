@@ -27,7 +27,7 @@ const Index = ({ allPosts }: { allPosts: unknown[] }) => (
           <Post
             key={content[0].heading}
             heading={content[0].heading}
-            images={content[0].pictures.map((p) => p.url)}
+            images={content[0].pictures}
             text={content[0].text}
           />
         ))}
@@ -41,7 +41,9 @@ const GET_ALL_POSTS = /* GraphQL */ `
     allPosts(first: $limit, orderBy: createdAt_ASC) {
       content {
         pictures {
-          url(imgixParams: { auto: format, q: 80 })
+          url
+          height
+          width
         }
         text
         heading

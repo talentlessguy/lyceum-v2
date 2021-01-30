@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { post, imageSet } from '../styles/post.module.css'
 
@@ -7,7 +8,11 @@ const Post = ({
   heading,
   imageProps
 }: {
-  images: string[]
+  images: {
+    url: string
+    height: number
+    width: number
+  }[]
   text: string
   heading: string
   imageProps?: unknown
@@ -16,7 +21,7 @@ const Post = ({
     <h2>{heading}</h2>
     <div className={imageSet}>
       {images?.map((img, i) => (
-        <img src={img} key={i} alt={heading} {...imageProps} />
+        <Image height={img.height} width={img.width} src={img.url} key={i} {...imageProps} />
       ))}
     </div>
 

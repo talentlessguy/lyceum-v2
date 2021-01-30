@@ -3,7 +3,7 @@ const wImages = require('next-images')
 
 module.exports = wImages({
   images: {
-    domains: ['img-fotki.yandex.ru', 'liceym2.ru']
+    domains: ['img-fotki.yandex.ru', 'liceym2.ru', 'www.datocms-assets.com']
   },
   typescript: {
     // !! WARN !!
