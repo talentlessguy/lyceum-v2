@@ -24,13 +24,8 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
             overflow-x: hidden;
             background: white;
           }
-          html {
-            font-family: 'Inter', sans-serif;
-          }
-          @supports (font-variation-settings: normal) {
-            html {
-              font-family: 'Inter var', sans-serif;
-            }
+          * {
+            font-family: 'Inter', sans-serif !important;
           }
           * {
             border-collapse: collapse;
