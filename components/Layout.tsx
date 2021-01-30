@@ -1,15 +1,20 @@
-import React, { PropsWithChildren, ReactNode } from 'react'
+import React, { PropsWithChildren } from 'react'
 // @ts-ignore
 import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
+import img1 from '../public/banner2.jpg'
+import img2 from '../public/banner3.png'
+import img3 from '../public/gosuslug.jpg'
+import img4 from '../public/banner1.jpg'
+import img5 from '../public/russian_electronic_school.jpg'
 
 const leftPics = [
   {
-    src: '/banner2.jpg',
+    src: img1,
     alt: 'Мин обр и науки РФ',
     link: 'https://minobrnauki.gov.ru/'
   },
   {
-    src: '/banner3.png',
+    src: img2,
     alt: 'Мин обр МО',
     link: 'https://mo.mosreg.ru/'
   }
@@ -17,23 +22,23 @@ const leftPics = [
 
 const rightPics = [
   {
-    src: '/gosuslug.jpg',
+    src: img3,
     alt: 'Госуслуги',
     link: 'https://www.gosuslugi.ru/'
   },
   {
-    src: '/banner1.jpg',
+    src: img4,
     link: 'https://telefon-doveria.ru/',
     alt: 'Психологическая помощь'
   },
   {
-    src: '/russian_electronic_school.jpg',
+    src: img5,
     alt: 'Российская электронная школа',
     link: 'https://resh.edu.ru/'
   }
 ]
 
-const Layout = ({ children, ...props }: PropsWithChildren) => (
+const Layout = ({ children, ...props }: PropsWithChildren<unknown>) => (
   <div className={grid} {...props}>
     <aside className={sidebar}>
       {leftPics.map((pic) => (
