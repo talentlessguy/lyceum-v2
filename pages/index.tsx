@@ -51,13 +51,8 @@ const GET_ALL_POSTS = /* GraphQL */ `
 `
 
 export async function getStaticProps() {
-  const data = await request({
-    query: GET_ALL_POSTS,
-    variables: { limit: 10 }
-  })
-  return {
-    props: data
-  }
+  const data = await request({ query: GET_ALL_POSTS, variables: { limit: 10 } })
+  return { props: data }
 }
 
 export default Index
