@@ -19,7 +19,7 @@ const Pagination = ({ count }: { count: number }) => {
   return (
     <div className={vertCenter}>
       <strong style={{ marginBottom: '0.5rem' }}>
-        Страница {current} из {count}
+        Страница {current} из {Math.floor(count / 5)}
       </strong>
 
       <PagesCounter
