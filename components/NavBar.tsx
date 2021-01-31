@@ -59,7 +59,7 @@ const links = {
     },
     {
       text: 'Социально-психологическая служба',
-      href: '/conditions/socio-psychology'
+      href: 'http://liceym2.ru/index.php/usloviya/sotsialno-psikhologicheskaya-sluzhba'
     }
   ],
   activity: [
