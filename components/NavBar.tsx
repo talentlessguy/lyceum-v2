@@ -64,8 +64,16 @@ const links = {
   ],
   activity: [
     {
+      text: 'Классы',
+      href: '/activity/classes'
+    },
+    {
       text: 'Учёба',
-      href: '/activity'
+      href: 'http://liceym2.ru/index.php/deyatelnost/uchebnaya-deyatelnost'
+    },
+    {
+      text: 'Всероссийская олимпиада школьников',
+      href: '/activity/olymp'
     }
   ],
   exams: [
@@ -139,7 +147,6 @@ const NavBar = () => {
             Деятельность: mapLinks(links.activity),
             Экзамены: mapLinks(links.exams),
             'Доступная среда': <Link href="/env">Доступная среда</Link>,
-            Учительская: <Link href="/teachers">Учительская</Link>,
             Безопасность: mapLinks(links.safety),
             Контакты: <Link href="/contacts">Контакты</Link>,
             Музей: <Link href="/museum">Музей</Link>,

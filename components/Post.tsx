@@ -21,7 +21,7 @@ const Post = ({
     <h2>{heading}</h2>
     <div className={imageSet}>
       {images?.map((img, i) => (
-        <Image height={img.height} width={img.width} src={img.url} key={i} {...imageProps} />
+        <Image quality={60} height={img.height} width={img.width} src={img.url} key={i} {...imageProps} />
       ))}
     </div>
 

@@ -62,7 +62,7 @@ const Layout = ({ children, ...props }: PropsWithChildren<unknown>) => (
     <aside className={sidebar}>
       {pics.slice(0, 2).map((pic) => (
         <a href={pic.customData.link} key={pic.alt}>
-          <Image objectFit="contain" quality={50} src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} />
+          <Image objectFit="contain" src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} quality={50} />
         </a>
       ))}
     </aside>
@@ -70,7 +70,7 @@ const Layout = ({ children, ...props }: PropsWithChildren<unknown>) => (
     <aside className={`${sidebar} ${sidebar_right}`}>
       {pics.slice(2, 5).map((pic) => (
         <a href={pic.customData.link} key={pic.alt}>
-          <Image objectFit="contain" quality={50} src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} />
+          <Image objectFit="contain" src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} quality={50} />
         </a>
       ))}
     </aside>
