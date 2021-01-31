@@ -129,7 +129,7 @@ const mapLinks = (
   ))
 
 const NavBar = () => {
-  const [vis, set] = useState(true)
+  const [vis, set] = useState(false)
 
   useEffect(() => {
     set(window.innerWidth > 1500)
