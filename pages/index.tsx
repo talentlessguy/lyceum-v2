@@ -14,7 +14,7 @@ const parseQ = (x: string | string[]) => parseInt(Array.isArray(x) ? x[0] : x, 1
 const Pagination = ({ count }: { count: number }) => {
   const router = useRouter()
 
-  const current = useMemo(() => parseQ(router.query.page) || 0, [])
+  const current = useMemo(() => parseQ(router.query.page) || 1, [])
 
   return (
     <div className={vertCenter}>

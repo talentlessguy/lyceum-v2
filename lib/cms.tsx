@@ -6,7 +6,7 @@ export function request({
   preview
 }: {
   query: string
-  variables: Record<string, any>
+  variables: Record<string, unknown>
   preview?: boolean
 }) {
   const endpoint = preview ? `https://graphql.datocms.com/preview` : `https://graphql.datocms.com/`

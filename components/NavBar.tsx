@@ -95,11 +95,11 @@ const links: linksObject = {
 
   safety: [
     {
-      href: '/safety/complex',
+      href: 'http://liceym2.ru/index.php/bezopasnost-i-zdorove-shkolnikov',
       text: 'Комплексная безопасность'
     },
     {
-      href: '/safety/it',
+      href: 'http://liceym2.ru/index.php/informatsionnaya-bezopasnost',
       text: 'Информационная безопаность'
     }
   ]
@@ -155,7 +155,7 @@ const NavBar = () => {
             'Доступная среда': <Link href="/env">Доступная среда</Link>,
             Безопасность: mapLinks(links.safety),
             Контакты: <Link href="/contacts">Контакты</Link>,
-            Музей: <Link href="/museum">Музей</Link>,
+            Музей: <Link href="http://liceym2.ru/index.php/muzej">Музей</Link>,
             'Частые вопросы': <Link href="/faq">Частые вопросы</Link>,
             ПФДО: <Link href="/pfdo">ПФДО</Link>,
             'ШСК "Олимп"': <Link href="/olimp">ШСК &quot;Олимп&quot;</Link>,

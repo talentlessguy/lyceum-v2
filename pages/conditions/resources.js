@@ -7,7 +7,7 @@ import { pics } from '../../styles/conditions/resources.module.css'
 const Resources = () => {
   return (
     <Layout>
-      <h1>Условия</h1>
+      <h1>Обеспечение</h1>
       <div>
         <h2> Материально-техническое обеспечение образовательной деятельности</h2>
         <table className={table}>
