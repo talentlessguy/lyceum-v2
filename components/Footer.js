@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className={style.footer}>
       <p>Лицей №2</p>
       <p>Московская область, город Протвино, улица Гагарина, д.7</p>
-      <p>Copyright © 2020</p>
+      <p>Copyright © {new Date().getFullYear()}</p>
     </footer>
   )
 }

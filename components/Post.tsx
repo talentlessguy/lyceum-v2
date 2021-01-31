@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Markdown from 'react-markdown'
 import { post, imageSet } from '../styles/post.module.css'
 
 const Post = ({
@@ -25,7 +26,9 @@ const Post = ({
       ))}
     </div>
 
-    <article>{text}</article>
+    <article>
+      <Markdown>{text}</Markdown>
+    </article>
   </div>
 )
 

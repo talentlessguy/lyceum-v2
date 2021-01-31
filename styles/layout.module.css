@@ -3,7 +3,13 @@
   width: 100%;
   grid-auto-flow: row;
   grid-template-columns: 0.2fr 3fr 0.2fr;
-  min-height: calc(100vh - 74px - 113px);
+  min-height: calc(100vh - 55px - 109px);
+}
+
+@media (max-width: 1500px) {
+  .grid {
+    min-height: calc(100vh - 109px);
+  }
 }
 
 .sidebar {
@@ -55,6 +61,13 @@
   }
   .sidebar {
     width: unset;
+    border-left: none;
+  }
+  .sidebar_right {
+    border-right: none;
+  }
+  .sidebar_left {
+    border-right: 2px solid black;
   }
 }
 
@@ -81,6 +94,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.vertCenter {
+  composes: center;
+  flex-direction: column;
 }
 
 .floatImage {

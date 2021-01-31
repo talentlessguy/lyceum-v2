@@ -3,7 +3,15 @@ import NextLink, { LinkProps } from 'next/link'
 import { MultiLevelNavbar } from 'react-multi-level-nav'
 import 'react-multi-level-nav/dist/defaultStyles.css'
 
-const links = {
+type linksObject = Record<
+  string,
+  {
+    text: string
+    href: string
+  }[]
+>
+
+const links: linksObject = {
   summary: [
     {
       text: 'Сведения о МБОУ "Лицей №2"',
@@ -74,18 +82,17 @@ const links = {
     {
       text: 'Всероссийская олимпиада школьников',
       href: '/activity/olymp'
-    }
-  ],
-  exams: [
-    {
-      href: '/exams/ege',
-      text: 'ЕГЭ'
     },
     {
-      href: '/exams/oge',
-      text: 'ОГЭ'
+      text: 'Дополнительное образование',
+      href: '/activity/external'
+    },
+    {
+      text: 'Проектная деятельность',
+      href: '/activity/projects'
     }
   ],
+
   safety: [
     {
       href: '/safety/complex',
@@ -145,7 +152,6 @@ const NavBar = () => {
             Руководство: mapLinks(links.mgmt),
             Условия: mapLinks(links.conditions),
             Деятельность: mapLinks(links.activity),
-            Экзамены: mapLinks(links.exams),
             'Доступная среда': <Link href="/env">Доступная среда</Link>,
             Безопасность: mapLinks(links.safety),
             Контакты: <Link href="/contacts">Контакты</Link>,
