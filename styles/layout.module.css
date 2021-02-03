@@ -2,7 +2,7 @@
   display: grid;
   width: 100%;
   grid-auto-flow: row;
-  grid-template-columns: 0.2fr 3fr 0.2fr;
+  grid-template-columns: 0.3fr 3fr 0.3fr;
   min-height: calc(100vh - 55px - 109px);
 }
 
@@ -17,7 +17,7 @@
   border-bottom: none;
   border-top: none;
   justify-self: left;
-  width: 8rem;
+  min-width: 8rem;
   height: auto;
   padding: 1em;
 }
@@ -26,6 +26,8 @@
   margin: 1rem 0;
   display: block;
   height: max-content;
+  text-underline-offset: 4px;
+  font-size: 14px;
 }
 
 .sidebar_right {
@@ -53,6 +55,7 @@
 @media (max-width: 800px) {
   .main {
     grid-column: 1 / 4;
+    padding: 0;
   }
   .grid {
     grid-template-rows: auto auto;
@@ -84,9 +87,7 @@
   font-size: calc(0.6em + 0.3vw);
 }
 
-.main h1,
-.main h2,
-.main h3 {
+.main h1 {
   text-align: center;
 }
 

@@ -1,6 +1,6 @@
 import { GraphQLClient } from 'graphql-request'
 
-export function request({
+export function request<T = unknown>({
   query,
   variables,
   preview
@@ -15,5 +15,5 @@ export function request({
       authorization: `Bearer ${process.env.NEXT_DATOCMS_API_TOKEN}`
     }
   })
-  return client.request(query, variables)
+  return client.request<T>(query, variables)
 }

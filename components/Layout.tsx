@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react'
 // @ts-ignore
 import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const pics = [
   {
@@ -57,9 +58,32 @@ const pics = [
   }
 ]
 
+const links: {
+  href: string
+  text: string
+}[] = [
+  {
+    href: '/schedule',
+    text: 'Режим работы'
+  },
+  {
+    href: '/first-graders',
+    text: 'Приём детей в 1 класс'
+  },
+  {
+    href: '/public-reports',
+    text: 'Публичные доклады и отчёты'
+  }
+]
+
 const Layout = ({ children, ...props }: PropsWithChildren<unknown>) => (
   <div className={grid} {...props}>
     <aside className={sidebar}>
+      {links.map(({ href, text }) => (
+        <Link {...{ href }} key={text}>
+          {text}
+        </Link>
+      ))}
       {pics.slice(0, 2).map((pic) => (
         <a href={pic.customData.link} key={pic.alt}>
           <Image objectFit="contain" src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} quality={50} />

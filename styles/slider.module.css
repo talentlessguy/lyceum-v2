@@ -1,7 +1,7 @@
 .slider_container {
   position: relative;
   user-select: none;
-  height: calc(100vh - 51px);
+  height: var(--height);
 }
 
 .slider_container h1 {
@@ -13,7 +13,7 @@
 
 .slider_container span {
   font-weight: 500;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.75rem + 1.5vw);
   width: 80vw;
 }
 
@@ -34,13 +34,13 @@
 }
 
 .slides {
-  height: 100vh;
+  height: var(--height);
   overflow: hidden;
 }
 
 .image {
   background-size: cover;
-  height: calc(100vh - 51px);
+  height: var(--height);
   width: 100%;
   background-blend-mode: darken;
 
@@ -69,4 +69,19 @@
 
 .learnMoreLink:hover {
   color: gray;
+}
+
+@media (max-width: 800px) {
+  .slider_container,
+  .slides,
+  .image {
+    height: 100vh;
+  }
+  .box {
+    top: calc(100% / 3);
+  }
+  .learnMoreLink {
+    right: 50px;
+    bottom: 50px;
+  }
 }

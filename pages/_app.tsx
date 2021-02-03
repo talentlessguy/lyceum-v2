@@ -33,6 +33,9 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
 
             scroll-behavior: smooth;
           }
+          :root {
+            --height: calc(100vh - 51px);
+          }
         `}
       </style>
       <Head>
