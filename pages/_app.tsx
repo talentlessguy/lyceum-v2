@@ -9,7 +9,7 @@ import '@openfonts/inter_cyrillic'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
 
-const CustomApp = ({ Component, pageProps }: AppProps) => {
+const CustomApp = ({ Component, pageProps, router }: AppProps) => {
   useEffect(() => {
     console.log(`%cMade by v 1 r t l ✨ ~> https://v1rtl.site`, 'font-size: 20px; color: yellow')
   }, [])
@@ -53,7 +53,9 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
       </Head>
 
       <NavBar />
+
       <Component {...pageProps} />
+
       <Footer />
     </Fragment>
   )

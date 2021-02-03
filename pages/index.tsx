@@ -1,13 +1,16 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import { vertCenter, feed } from '../styles/layout.module.css'
 import * as styles from '../styles/slider.module.css'
 import Slideshow from '../components/Slideshow'
-import Post from '../components/Post'
+import Post, { PostProps } from '../components/Post'
 import Layout from '../components/Layout'
 import { request } from '../lib/cms'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import PagesCounter from 'rc-pagination'
+
+import { Flipper, Flipped } from 'react-flip-toolkit'
+import Link from 'next/link'
 
 const parseQ = (x: string | string[]) => parseInt(Array.isArray(x) ? x[0] : x, 10)
 
@@ -34,11 +37,37 @@ const Pagination = ({ count }: { count: number }) => {
   )
 }
 
+const PostLink = ({ content, id }: { id: number; content: PostProps }) => {
+  const router = useRouter()
+
+  return (
+    <Post
+      onMouseOver={(e) => {
+        e.currentTarget.style.cursor = 'pointer'
+        e.currentTarget.style.boxShadow = '0px 10px 60px rgba(0, 0, 0, 0.13)'
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = 'none'
+      }}
+      onClick={() => {
+        router.push(`/post/${id}`)
+      }}
+      key={content[0].heading}
+      heading={content[0].heading}
+      images={content[0].pictures}
+      text={content[0].text}
+    />
+  )
+}
+
 const Index = ({
   allPosts,
   _allPostsMeta
 }: {
-  allPosts: unknown[]
+  allPosts: {
+    content: PostProps
+    id: number
+  }[]
   _allPostsMeta: {
     count: number
   }
@@ -62,13 +91,8 @@ const Index = ({
     <Layout id="news">
       <h1>Новости</h1>
       <div className={feed}>
-        {allPosts.map(({ content }) => (
-          <Post
-            key={content[0].heading}
-            heading={content[0].heading}
-            images={content[0].pictures}
-            text={content[0].text}
-          />
+        {allPosts.map(({ content, id }) => (
+          <PostLink key={content.heading} {...{ content, id }} />
         ))}
       </div>
       <Pagination count={_allPostsMeta.count} />
@@ -88,6 +112,7 @@ const GET_ALL_POSTS = /* GraphQL */ `
         text
         heading
       }
+      id
     }
 
     _allPostsMeta {

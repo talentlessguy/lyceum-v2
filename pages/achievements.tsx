@@ -13,11 +13,13 @@ const Achievements = ({ images }: Props) => (
         .list {
           display: grid;
           gap: 4rem;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
       `}
     </style>
-    <h2>За годы работы коллектив МБОУ «Лицей №2» достиг высоких результатов деятельности</h2>
+    <h1>Достижения</h1>
+    <p>За годы работы коллектив МБОУ «Лицей №2» достиг высоких результатов деятельности:</p>
+    <br />
     <div className="list">
       {images.map(({ url, title, width, height }) => (
         <Post
@@ -25,12 +27,12 @@ const Achievements = ({ images }: Props) => (
           images={[
             {
               url,
-              width,
-              height
+              width: width,
+              height: height
             }
           ]}
           text={title}
-          imageProps={{ objectFit: 'contain', quality: 60 }}
+          imageProps={{ quality: 60, layout: 'responsive' }}
         />
       ))}
     </div>

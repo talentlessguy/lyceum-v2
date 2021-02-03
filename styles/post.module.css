@@ -1,6 +1,10 @@
 .post {
   display: flex;
   flex-direction: column;
+  transition: box-shadow 0.3s;
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 15px;
 }
 
 .post article {
@@ -9,7 +13,7 @@
 
 .imageSet {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .post img {

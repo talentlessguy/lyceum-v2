@@ -1,30 +1,39 @@
 import Image, { ImageProps } from 'next/image'
-import React from 'react'
+import React, { CSSProperties, PropsWithChildren } from 'react'
 import Markdown from 'react-markdown'
 import { post, imageSet } from '../styles/post.module.css'
 
-const Post = ({
-  images,
-  text,
-  heading,
-  imageProps
-}: {
-  images: {
+export type PostProps = {
+  images?: {
     url: string
     height: number
     width: number
   }[]
   text?: string
   heading?: string
-  imageProps?: Omit<ImageProps, 'height' | 'src' | 'width'> & { layout?: 'fixed' | 'intrinsic' | 'responsive' }
-}) => (
-  <div className={post}>
+}
+
+const Post = ({
+  images,
+  text,
+  heading,
+  imageProps,
+  ...props
+}: PropsWithChildren<
+  PostProps & {
+    style?: CSSProperties
+    imageProps?: Omit<ImageProps, 'height' | 'src' | 'width'> & { layout?: 'fixed' | 'intrinsic' | 'responsive' }
+  } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+>) => (
+  <div className={post} {...props}>
     {heading && <h2>{heading}</h2>}
-    <div className={imageSet}>
-      {images?.map((img, i) => (
-        <Image quality={60} height={img.height} width={img.width} src={img.url} key={i} {...imageProps} />
-      ))}
-    </div>
+    {images && (
+      <div className={imageSet}>
+        {images?.map((img, i) => (
+          <Image quality={60} height={img.height} width={img.width} src={img.url} key={i} {...imageProps} />
+        ))}
+      </div>
+    )}
 
     {text && (
       <article>

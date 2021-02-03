@@ -1,4 +1,5 @@
-import React, { PropsWithChildren } from 'react'
+import React from 'react'
+
 // @ts-ignore
 import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
 import Image from 'next/image'
@@ -76,7 +77,10 @@ const links: {
   }
 ]
 
-const Layout = ({ children, ...props }: PropsWithChildren<unknown>) => (
+const Layout = ({
+  children,
+  ...props
+}: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => (
   <div className={grid} {...props}>
     <aside className={sidebar}>
       {links.map(({ href, text }) => (

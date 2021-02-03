@@ -14,5 +14,14 @@ module.exports = wImages({
   },
   experimental: {
     modern: true
+  },
+  async redirects() {
+    return [
+      {
+        source: '/post',
+        destination: '/',
+        permanent: true
+      }
+    ]
   }
 })
