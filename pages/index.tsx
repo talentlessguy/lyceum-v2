@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useMemo } from 'react'
 import { vertCenter, feed } from '../styles/layout.module.css'
 import * as styles from '../styles/slider.module.css'
 import Slideshow from '../components/Slideshow'
@@ -8,9 +8,6 @@ import { request } from '../lib/cms'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import PagesCounter from 'rc-pagination'
-
-import { Flipper, Flipped } from 'react-flip-toolkit'
-import Link from 'next/link'
 
 const parseQ = (x: string | string[]) => parseInt(Array.isArray(x) ? x[0] : x, 10)
 

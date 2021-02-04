@@ -7,6 +7,10 @@
   border-radius: 15px;
 }
 
+.postContent {
+  composes: table from './table.module.css';
+}
+
 .post article {
   text-align: justify;
 }

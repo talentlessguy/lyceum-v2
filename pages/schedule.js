@@ -27,118 +27,147 @@ const Schedule = () => {
         <tbody>
           <tr>
             <td>
-              <span>
-                <strong>I триместр</strong>
-              </span>
+              <strong>I триместр</strong>
             </td>
             <td>
-              <span>
-                <strong>II триместр</strong>
-              </span>
+              <strong>II триместр</strong>
             </td>
             <td>
-              <span>
-                <strong>III триместр</strong>
-              </span>
+              <strong>III триместр</strong>
             </td>
           </tr>
           <tr>
             <td>
-              <span>
-                <strong>
-                  &nbsp;
-                  <span>c 01.09 2020 по 22.11.2020</span>
-                </strong>
-              </span>
+              <strong>&nbsp; c 01.09 2020 по 22.11.2020</strong>
             </td>
             <td>
-              <span>
-                <strong>
-                  &nbsp;
-                  <span>с 23.11.2020 по 28.02.2021</span>
-                </strong>
-              </span>
+              <strong>&nbsp; с 23.11.2020 по 28.02.2021</strong>
             </td>
             <td>
-              <span>
-                <strong>
-                  &nbsp;
-                  <span>с 01.03.2021 по 31.05.2021</span>
-                </strong>
-              </span>
+              <strong>&nbsp; с 01.03.2021 по 31.05.2021</strong>
             </td>
           </tr>
           <tr>
             <td>
               <p>
-                <span>
-                  <strong>1-ый модуль –</strong>{' '}
-                </span>
+                <strong>1-ый модуль –</strong>{' '}
               </p>
-              <p>
-                <span>с 01.09.2020 по 04.10.2020;</span>
-              </p>
+              <p>с 01.09.2020 по 04.10.2020;</p>
             </td>
             <td>
               <p>
-                <span>
-                  <strong>3-й модуль -</strong>{' '}
-                </span>
+                <strong>3-й модуль -</strong>{' '}
               </p>
-              <p>
-                <span>с 23.11.2020 по 31.12.2020;</span>
-              </p>
+              <p>с 23.11.2020 по 31.12.2020;</p>
             </td>
             <td>
               <p>
-                <span>
-                  <strong>5-й модуль&nbsp; -</strong>{' '}
-                </span>
+                <strong>5-й модуль&nbsp; -</strong>{' '}
               </p>
-              <p>
-                <span>с 01.03.2021 по 11.04.2021;</span>
-              </p>
+              <p>с 01.03.2021 по 11.04.2021;</p>
             </td>
           </tr>
           <tr>
             <td>
               <p>
-                <span>
-                  <strong>2-й модуль -</strong>{' '}
-                </span>
+                <strong>2-й модуль -</strong>{' '}
               </p>
-              <p>
-                <span>с 12.10.2020 по 15.11.2020;</span>
-              </p>
+              <p>с 12.10.2020 по 15.11.2020;</p>
             </td>
             <td>
               <p>
-                <span>
-                  <strong>4-й модуль -</strong>{' '}
-                </span>
+                <strong>4-й модуль -</strong>{' '}
               </p>
-              <p>
-                <span>с 11.01. 2021 по 21.02.2021;</span>
-              </p>
+              <p>с 11.01. 2021 по 21.02.2021;</p>
             </td>
             <td>
               <p>
-                <span>
-                  <strong>6-й модуль -</strong>{' '}
-                </span>
+                <strong>6-й модуль -</strong>{' '}
               </p>
-              <p>
-                <span>с 19.04.2021 по 31.05.2021 (2-8, 10 классы);</span>
-              </p>
-              <p>
-                <span>
-                  <span>с 19.04.2021 по 23.05.2021 (1, 9, 11 классы).</span>
-                </span>
-              </p>
+              <p>с 19.04.2021 по 31.05.2021 (2-8, 10 классы);</p>
+              <p>с 19.04.2021 по 23.05.2021 (1, 9, 11 классы).</p>
             </td>
           </tr>
         </tbody>
       </table>
+      <br />
+      <h2>Количество учебных дней в неделю</h2>
+      <ul>
+        <li>
+          <span>начальное общее образование - 1-е классы – 5 дней; 2-4 классы – 5 дней;</span>
+        </li>
+        <li>
+          <span>основное общее образование – 5 дней (5-9 классы);</span>
+        </li>
+        <li>
+          <span>среднее (полное) общее образование – 5 дней (10- 11 классы).</span>
+        </li>
+      </ul>
+      <h2>Форма организации образовательного процесса</h2>
+      <table className={table}>
+        <tbody>
+          <tr>
+            <td>
+              <span>
+                <strong>
+                  <span>каникулы осенние:</span>&nbsp;
+                </strong>
+              </span>
+            </td>
+            <td>
+              <span>
+                <strong>
+                  <span>каникулы зимние:</span>&nbsp;
+                </strong>
+              </span>
+            </td>
+            <td>
+              <span>
+                <strong>
+                  <span>каникулы весенние:</span>
+                  &nbsp;
+                </strong>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>
+                <span>c 05.10.2020 по 11.10.2020;</span>
+              </strong>
+            </td>
+            <td>
+              <strong>
+                <span>c 01.01.2021 по 10.01.2021;</span>
+              </strong>
+            </td>
+            <td>
+              <strong>
+                c <span>12.04.2021 по 18.04.2021.</span>
+              </strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>
+                <span>
+                  <span>c 16.11.2020 по 242.11.2020;</span>
+                </span>
+              </strong>
+            </td>
+            <td>
+              <strong>
+                <span>c 22.02.2021 по 28.02.2021;</span>
+              </strong>
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <strong>Начало учебных занятий: </strong>8:30. <strong>Окончание учебных занятий: </strong>16:45.
+      </p>
+      <h2>Продолжительность урока</h2>
     </Layout>
   )
 }

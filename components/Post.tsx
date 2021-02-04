@@ -1,7 +1,8 @@
 import Image, { ImageProps } from 'next/image'
 import React, { CSSProperties, PropsWithChildren } from 'react'
 import Markdown from 'react-markdown'
-import { post, imageSet } from '../styles/post.module.css'
+import { post, imageSet, postContent } from '../styles/post.module.css'
+import gfm from 'remark-gfm'
 
 export type PostProps = {
   images?: {
@@ -36,8 +37,8 @@ const Post = ({
     )}
 
     {text && (
-      <article>
-        <Markdown>{text}</Markdown>
+      <article className={postContent}>
+        <Markdown plugins={[gfm]}>{text}</Markdown>
       </article>
     )}
   </div>

@@ -8,10 +8,19 @@ import '../styles/navbar.css'
 import '@openfonts/inter_cyrillic'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
 
-const CustomApp = ({ Component, pageProps, router }: AppProps) => {
+const CustomApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter()
   useEffect(() => {
     console.log(`%cMade by v 1 r t l ✨ ~> https://v1rtl.site`, 'font-size: 20px; color: yellow')
+    const handler = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'auto'
+      })
+    }
+    router.events.on('routeChangeComplete', handler)
   }, [])
 
   return (
@@ -22,7 +31,6 @@ const CustomApp = ({ Component, pageProps, router }: AppProps) => {
           html {
             margin: 0;
             height: 100%;
-            overflow-x: hidden;
             background: white;
           }
           * {
