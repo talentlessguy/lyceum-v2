@@ -128,6 +128,24 @@ const mapLinks = (
     </Link>
   ))
 
+const NavBarContent = () => (
+  <MultiLevelNavbar
+    tree={{
+      Главная: <Link href="/">Главная</Link>,
+      Сведения: mapLinks(links.summary),
+      Руководство: mapLinks(links.mgmt),
+      Условия: mapLinks(links.conditions),
+      Деятельность: mapLinks(links.activity),
+      'Доступная среда': <Link href="/env">Доступная среда</Link>,
+      Безопасность: mapLinks(links.safety),
+      Контакты: <Link href="/contacts">Контакты</Link>,
+      Музей: <Link href="http://liceym2.ru/index.php/muzej">Музей</Link>,
+      'Частые вопросы': <Link href="/faq">Частые вопросы</Link>
+    }}
+    className="nav"
+  />
+)
+
 const NavBar = () => {
   const [vis, set] = useState(false)
 
@@ -146,24 +164,9 @@ const NavBar = () => {
         {vis ? 'X' : '☰'}
       </button>
       {vis && (
-        <MultiLevelNavbar
-          preChildren={<Link href="/">Главная</Link>}
-          tree={{
-            Сведения: mapLinks(links.summary),
-            Руководство: mapLinks(links.mgmt),
-            Условия: mapLinks(links.conditions),
-            Деятельность: mapLinks(links.activity),
-            'Доступная среда': <Link href="/env">Доступная среда</Link>,
-            Безопасность: mapLinks(links.safety),
-            Контакты: <Link href="/contacts">Контакты</Link>,
-            Музей: <Link href="http://liceym2.ru/index.php/muzej">Музей</Link>,
-            'Частые вопросы': <Link href="/faq">Частые вопросы</Link>,
-            ПФДО: <Link href="/pfdo">ПФДО</Link>,
-            'ШСК "Олимп"': <Link href="/olimp">ШСК &quot;Олимп&quot;</Link>,
-            ЦОС: <Link href="/cos">ЦОС</Link>
-          }}
-          className="nav"
-        />
+        <div className="nav_root_container">
+          <NavBarContent />
+        </div>
       )}
     </>
   )

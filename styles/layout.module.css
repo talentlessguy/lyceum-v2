@@ -46,10 +46,8 @@
 }
 
 .feed {
-  display: grid;
-  gap: 4rem;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-
+  column-count: 2;
+  column-gap: 4em;
   padding: 2rem;
 }
 
@@ -75,9 +73,9 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1300px) {
   .feed {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-count: 1;
   }
 }
 

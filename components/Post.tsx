@@ -11,7 +11,12 @@ export type PostProps = {
     width: number
   }[]
   text?: string
-  heading?: string
+  heading?:
+    | {
+        level: 1
+        text: string
+      }
+    | string
 }
 
 const Post = ({
@@ -27,7 +32,7 @@ const Post = ({
   } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 >) => (
   <div className={post} {...props}>
-    {heading && <h2>{heading}</h2>}
+    {typeof heading !== 'string' && heading.text && heading.level === 1 ? <h1>{heading.text}</h1> : <h2>{heading}</h2>}
     {images && (
       <div className={imageSet}>
         {images?.map((img, i) => (

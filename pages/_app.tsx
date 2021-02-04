@@ -43,6 +43,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
           }
           :root {
             --height: calc(100vh - 51px);
+            --shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
           }
         `}
       </style>

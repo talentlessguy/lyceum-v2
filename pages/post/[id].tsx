@@ -14,7 +14,13 @@ type Props = {
 const PostPage = ({ content }: Props) => {
   return (
     <Layout>
-      <Post text={content[0].text} heading={content[0].heading} />
+      <Post
+        text={content[0].text}
+        heading={{
+          level: 1,
+          text: content[0].heading
+        }}
+      />
     </Layout>
   )
 }

@@ -74,6 +74,18 @@ const links: {
   {
     href: '/public-reports',
     text: 'Публичные доклады и отчёты'
+  },
+  {
+    href: '/pfdo',
+    text: 'ПФДО'
+  },
+  {
+    href: '/olimp',
+    text: 'ШСК "Олимп"'
+  },
+  {
+    text: 'ЦОС',
+    href: '/cos'
   }
 ]
 
@@ -83,7 +95,7 @@ const Layout = ({
 }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => (
   <div className={grid} {...props}>
     <aside className={sidebar}>
-      {links.map(({ href, text }) => (
+      {links.slice(0, 2).map(({ href, text }) => (
         <Link {...{ href }} key={text}>
           {text}
         </Link>
@@ -96,6 +108,11 @@ const Layout = ({
     </aside>
     <main className={main}>{children}</main>
     <aside className={`${sidebar} ${sidebar_right}`}>
+      {links.slice(2).map(({ href, text }) => (
+        <Link {...{ href }} key={text}>
+          {text}
+        </Link>
+      ))}
       {pics.slice(2, 5).map((pic) => (
         <a href={pic.customData.link} key={pic.alt}>
           <Image objectFit="contain" src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} quality={50} />

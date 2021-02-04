@@ -5,6 +5,8 @@
   background-color: white;
   padding: 2.5rem;
   border-radius: 15px;
+  height: max-content;
+  margin: 0 0 4rem;
 }
 
 .postContent {
@@ -17,7 +19,8 @@
 
 .imageSet {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
 }
 
 .post img {

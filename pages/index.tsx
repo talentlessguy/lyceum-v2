@@ -73,16 +73,18 @@ const Index = ({
     {/* @ts-ignore */}
     <div className={styles.slider_container}>
       <Slideshow />
-      <div className={styles.box}>
-        <h1>МБОУ Лицей №2</h1>
-        <span>
-          муниципальное бюджетное общеобразовательное учреждение <br />
-          г. Протвино, Московская область
-        </span>
+      <div className={styles.overlay_container}>
+        <div className={styles.box}>
+          <h1>МБОУ Лицей №2</h1>
+          <span>
+            муниципальное бюджетное общеобразовательное учреждение <br />
+            г. Протвино, Московская область
+          </span>
+          <a className={styles.learnMoreLink} href="#news">
+            Новости ↘
+          </a>
+        </div>
       </div>
-      <a className={styles.learnMoreLink} href="#news">
-        Новости ↘
-      </a>
     </div>
 
     <Layout id="news">
