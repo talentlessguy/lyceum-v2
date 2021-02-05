@@ -37,18 +37,13 @@
 
 .main {
   padding: 3rem;
+  margin-bottom: 1rem;
 }
 
 .main p,
 .main strong,
 .main a {
   line-height: 1.75;
-}
-
-.feed {
-  column-count: 2;
-  column-gap: 4em;
-  padding: 2rem;
 }
 
 @media (max-width: 800px) {
@@ -70,12 +65,6 @@
   }
   .sidebar_left {
     border-right: 2px solid black;
-  }
-}
-
-@media (max-width: 1300px) {
-  .feed {
-    column-count: 1;
   }
 }
 

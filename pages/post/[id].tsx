@@ -1,26 +1,17 @@
 import { GetServerSideProps } from 'next'
 import React from 'react'
 import Layout from '../../components/Layout'
-import Post from '../../components/Post'
+import Post, { PostProps } from '../../components/Post'
 import { request } from '../../lib/cms'
 
 type Props = {
-  content: {
-    text: string
-    heading: string
-  }
+  content: [PostProps]
 }
 
 const PostPage = ({ content }: Props) => {
   return (
     <Layout>
-      <Post
-        text={content[0].text}
-        heading={{
-          level: 1,
-          text: content[0].heading
-        }}
-      />
+      <Post text={content[0].text} heading={content[0].heading} headingLevel={1} pictures={content[0].pictures} />
     </Layout>
   )
 }
@@ -32,6 +23,11 @@ const GET_POST = /* GraphQL */ `
       content {
         text
         heading
+        pictures {
+          url
+          height
+          width
+        }
       }
     }
   }

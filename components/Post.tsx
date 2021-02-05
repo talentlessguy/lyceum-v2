@@ -5,25 +5,22 @@ import { post, imageSet, postContent } from '../styles/post.module.css'
 import gfm from 'remark-gfm'
 
 export type PostProps = {
-  images?: {
+  pictures?: {
     url: string
     height: number
     width: number
   }[]
   text?: string
-  heading?:
-    | {
-        level: 1
-        text: string
-      }
-    | string
+  heading?: string
+  headingLevel?: 1
 }
 
 const Post = ({
-  images,
+  pictures,
   text,
   heading,
   imageProps,
+  headingLevel,
   ...props
 }: PropsWithChildren<
   PostProps & {
@@ -32,10 +29,10 @@ const Post = ({
   } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 >) => (
   <div className={post} {...props}>
-    {typeof heading !== 'string' && heading.text && heading.level === 1 ? <h1>{heading.text}</h1> : <h2>{heading}</h2>}
-    {images && (
+    {headingLevel === 1 ? <h1>{heading}</h1> : <h2>{heading}</h2>}
+    {pictures && (
       <div className={imageSet}>
-        {images?.map((img, i) => (
+        {pictures?.map((img, i) => (
           <Image quality={60} height={img.height} width={img.width} src={img.url} key={i} {...imageProps} />
         ))}
       </div>

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { vertCenter, feed } from '../styles/layout.module.css'
+import { vertCenter } from '../styles/layout.module.css'
 import * as styles from '../styles/slider.module.css'
 import Slideshow from '../components/Slideshow'
 import Post, { PostProps } from '../components/Post'
@@ -8,6 +8,7 @@ import { request } from '../lib/cms'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import PagesCounter from 'rc-pagination'
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 const parseQ = (x: string | string[]) => parseInt(Array.isArray(x) ? x[0] : x, 10)
 
@@ -51,7 +52,7 @@ const PostLink = ({ content, id }: { id: number; content: PostProps }) => {
       }}
       key={content[0].heading}
       heading={content[0].heading}
-      images={content[0].pictures}
+      pictures={content[0].pictures}
       text={content[0].text}
     />
   )
@@ -89,11 +90,18 @@ const Index = ({
 
     <Layout id="news">
       <h1>Новости</h1>
-      <div className={feed}>
-        {allPosts.map(({ content, id }) => (
-          <PostLink key={content.heading} {...{ content, id }} />
-        ))}
-      </div>
+      <ResponsiveMasonry
+        columnsCountBreakPoints={{
+          1400: 1,
+          1450: 2
+        }}
+      >
+        <Masonry gutter="3rem" columnsCount={2}>
+          {allPosts.map(({ content, id }) => (
+            <PostLink key={id} {...{ content, id }} />
+          ))}
+        </Masonry>
+      </ResponsiveMasonry>
       <Pagination count={_allPostsMeta.count} />
     </Layout>
   </>

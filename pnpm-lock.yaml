@@ -10,6 +10,7 @@ dependencies:
   react-dom: 17.0.1
   react-markdown: 5.0.3_@types+react@17.0.0
   react-multi-level-nav: 0.0.6
+  react-responsive-masonry: 2.1.1_react-dom@17.0.1
   react-slick: 0.28.0_react-dom@17.0.1
   react-super-responsive-table: 5.2.0_react-dom@17.0.1
   remark-gfm: 1.0.0
@@ -3291,6 +3292,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
+  /react-responsive-masonry/2.1.1_react-dom@17.0.1:
+    dependencies:
+      react-dom: 17.0.1
+    dev: false
+    peerDependencies:
+      react-dom: ^16.8.0
+    resolution:
+      integrity: sha512-ec39c5Ot/p8tcjOIBn6pORybHD3870hXZ332Xk1dK5Ky+lNAj7S8giRWSDr5PLaCKQvaf+4Xje3hIQH3D0By1Q==
   /react-slick/0.28.0_react-dom@17.0.1:
     dependencies:
       classnames: 2.2.6
@@ -4278,6 +4287,7 @@ specifiers:
   react-dom: ^17.0.1
   react-markdown: ^5.0.3
   react-multi-level-nav: ^0.0.6
+  react-responsive-masonry: ^2.1.1
   react-slick: ^0.28.0
   react-super-responsive-table: ^5.2.0
   remark-gfm: ^1.0.0
