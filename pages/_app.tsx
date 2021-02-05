@@ -49,7 +49,10 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
       </style>
       <Head>
         <title>МБОУ Лицей №2</title>
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" href="/icon.png" />
+        <meta charSet="utf-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="description"
           content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
@@ -59,6 +62,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
           content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
         />
         <meta name="og:locale" content="ru_RU" />
+        <meta name="theme-color" content="#000000" />
       </Head>
 
       <NavBar />

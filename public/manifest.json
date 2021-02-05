@@ -1,0 +1,10 @@
+{
+  "name": "МБОУ \"Лицей №2\"",
+  "short_name": "Лицей №2",
+  "theme_color": "#ffffff",
+  "background_color": "#000000",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "splash_pages": null
+}
