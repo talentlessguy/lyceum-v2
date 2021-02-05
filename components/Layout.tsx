@@ -20,7 +20,7 @@ const pics = [
     filename: 'banner2.jpg',
     width: 225,
     height: 225,
-    url: 'https://www.datocms-assets.com/39473/1612041296-banner2.jpg',
+    url: 'https://www.datocms-assets.com/39473/1612536764-banner2.png',
     alt: 'Мин обр и науки РФ',
     customData: {
       link: 'https://minobrnauki.gov.ru/'
@@ -95,29 +95,53 @@ const Layout = ({
 }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => (
   <div className={grid} {...props}>
     <aside className={sidebar}>
-      {links.slice(0, 2).map(({ href, text }) => (
-        <Link {...{ href }} key={text}>
-          {text}
-        </Link>
-      ))}
-      {pics.slice(0, 2).map((pic) => (
-        <a href={pic.customData.link} key={pic.alt}>
-          <Image objectFit="contain" src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} quality={50} />
-        </a>
-      ))}
+      <div>
+        {links.slice(0, 2).map(({ href, text }) => (
+          <Link {...{ href }} key={text}>
+            {text}
+          </Link>
+        ))}
+      </div>
+      <hr />
+      <div>
+        {pics.slice(0, 2).map((pic) => (
+          <a href={pic.customData.link} key={pic.alt}>
+            <Image
+              objectFit="contain"
+              src={pic.url}
+              height={pic.height}
+              width={pic.height}
+              alt={pic.alt}
+              quality={50}
+            />
+          </a>
+        ))}
+      </div>
     </aside>
     <main className={main}>{children}</main>
     <aside className={`${sidebar} ${sidebar_right}`}>
-      {links.slice(2).map(({ href, text }) => (
-        <Link {...{ href }} key={text}>
-          {text}
-        </Link>
-      ))}
-      {pics.slice(2, 5).map((pic) => (
-        <a href={pic.customData.link} key={pic.alt}>
-          <Image objectFit="contain" src={pic.url} height={pic.height} width={pic.height} alt={pic.alt} quality={50} />
-        </a>
-      ))}
+      <div>
+        {links.slice(2).map(({ href, text }) => (
+          <Link {...{ href }} key={text}>
+            {text}
+          </Link>
+        ))}
+      </div>
+      <hr />
+      <div>
+        {pics.slice(2, 5).map((pic) => (
+          <a href={pic.customData.link} key={pic.alt}>
+            <Image
+              objectFit="contain"
+              src={pic.url}
+              height={pic.height}
+              width={pic.height}
+              alt={pic.alt}
+              quality={50}
+            />
+          </a>
+        ))}
+      </div>
     </aside>
   </div>
 )

@@ -18,7 +18,12 @@ const Pagination = ({ count }: { count: number }) => {
   const current = useMemo(() => parseQ(router.query.page) || 1, [])
 
   return (
-    <div className={vertCenter}>
+    <div
+      className={vertCenter}
+      style={{
+        margin: '2rem 0'
+      }}
+    >
       <strong style={{ marginBottom: '0.5rem' }}>
         Страница {current} из {Math.floor(count / 5) || 1}
       </strong>

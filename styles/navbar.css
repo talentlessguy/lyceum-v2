@@ -3,6 +3,7 @@
   display: inherit;
   justify-content: stretch;
   align-items: inherit;
+  z-index: 10;
 }
 
 .nav * {
@@ -55,7 +56,6 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  z-index: 999;
 }
 
 .ham_btn {
@@ -69,7 +69,7 @@
   position: fixed;
   display: none;
   box-shadow: var(--shadow);
-  z-index: 999;
+  z-index: 10;
 }
 
 @media (max-width: 1500px) {
@@ -95,12 +95,10 @@
     width: auto;
     background: white;
     border: 2px solid black;
-    z-index: 999;
   }
   .nav_root_container {
     padding: 0;
     display: block;
     border: none;
-    z-index: unset;
   }
 }
