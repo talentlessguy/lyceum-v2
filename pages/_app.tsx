@@ -51,6 +51,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
         <title>МБОУ Лицей №2</title>
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" href="/icon.png" />
+        <link rel="favicon" href="/favicon.ico" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
@@ -62,7 +63,14 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
           content="муниципальное бюджетное общеобразовательное учреждение г. Протвино Московская область"
         />
         <meta name="og:locale" content="ru_RU" />
-        <meta name="theme-color" content="#000000" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
 
       <NavBar />
