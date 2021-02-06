@@ -93,8 +93,15 @@ const Index = ({
       </div>
     </div>
 
-    <Layout id="news">
-      <h1>Новости</h1>
+    <Layout>
+      <h1
+        id="news"
+        style={{
+          scrollMarginTop: '100px'
+        }}
+      >
+        Новости
+      </h1>
       <ResponsiveMasonry
         columnsCountBreakPoints={{
           1400: 1,
