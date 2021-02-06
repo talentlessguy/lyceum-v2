@@ -8,7 +8,7 @@ import { request } from '../lib/cms'
 import { GetServerSideProps } from 'next'
 import { useRouter } from 'next/router'
 import PagesCounter from 'rc-pagination'
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+import Grid from '../components/Grid'
 
 const parseQ = (x: string | string[]) => parseInt(Array.isArray(x) ? x[0] : x, 10)
 
@@ -86,9 +86,6 @@ const Index = ({
             муниципальное бюджетное общеобразовательное учреждение <br />
             г. Протвино, Московская область
           </span>
-          <a className={styles.learnMoreLink} href="#news">
-            Новости ↘
-          </a>
         </div>
       </div>
     </div>
@@ -102,18 +99,12 @@ const Index = ({
       >
         Новости
       </h1>
-      <ResponsiveMasonry
-        columnsCountBreakPoints={{
-          1400: 1,
-          1450: 2
-        }}
-      >
-        <Masonry gutter="3rem" columnsCount={2}>
-          {allPosts.map(({ content, id }) => (
-            <PostLink key={id} {...{ content, id }} />
-          ))}
-        </Masonry>
-      </ResponsiveMasonry>
+
+      <Grid>
+        {allPosts.map(({ content, id }) => (
+          <PostLink key={id} {...{ content, id }} />
+        ))}
+      </Grid>
       <Pagination count={_allPostsMeta.count} />
     </Layout>
   </>

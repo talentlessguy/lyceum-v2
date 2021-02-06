@@ -94,20 +94,20 @@ const links: {
     text: 'Приём детей в 1 класс'
   },
   {
-    href: '/public-reports',
+    href: 'http://liceym2.ru/index.php/publichnye-doklady-i-otchjoty',
     text: 'Публичные доклады и отчёты'
   },
   {
-    href: '/pfdo',
+    href: 'http://liceym2.ru/index.php/pfdo',
     text: 'ПФДО'
   },
   {
-    href: '/olimp',
+    href: 'http://liceym2.ru/images/SHSK_Olimp/ystav_olimp.pdf',
     text: 'ШСК "Олимп"'
   },
   {
     text: 'ЦОС',
-    href: '/cos'
+    href: 'http://liceym2.ru/index.php/tsos'
   }
 ]
 

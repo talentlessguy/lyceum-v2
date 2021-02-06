@@ -14,7 +14,7 @@ import '../public/font/font.css'
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
   useEffect(() => {
-    console.log(`%cMade by v 1 r t l ✨ ~> https://v1rtl.site`, 'font-size: 20px; color: yellow')
+    console.log(`%cby v 1 r t l ✨ ~> https://v1rtl.site`, 'font-size: 20px; color: yellow')
     const handler = () => {
       window.scrollTo({
         top: 0,
@@ -44,8 +44,11 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
           }
 
           :root {
-            --height: calc(100vh - 51px);
+            --height: calc(100vh - 68px);
             --shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);
+          }
+          li {
+            line-height: 2;
           }
           @media (max-width: 1500px) {
             :root {

@@ -5,15 +5,17 @@
 }
 
 .slider_container h1 {
-  font-size: 9vw;
+  font-size: calc(1rem + 8.5vw);
   margin-bottom: 0.2em;
+  margin-top: 0;
   font-weight: bold;
-  letter-spacing: -3px;
+  letter-spacing: -5px;
+  margin-left: -6px;
 }
 
 .slider_container span {
   font-weight: 500;
-  font-size: calc(0.5rem + 0.5vw);
+  font-size: calc(0.75rem + 0.25vw);
 }
 
 .image_first {

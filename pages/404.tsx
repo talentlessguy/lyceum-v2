@@ -12,7 +12,7 @@ const Page404 = () => (
   >
     <h1
       style={{
-        fontSize: 'calc(6rem + 6vw)',
+        fontSize: 'calc(8rem + 8vw)',
         fontFamily: '"Space Mono", "Fira Code", Consolas, monospace !important',
         margin: 0
       }}
