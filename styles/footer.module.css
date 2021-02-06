@@ -1,8 +1,6 @@
 .footer {
   padding: 1rem;
-  border-width: 2px;
-  border-style: solid;
-  border-color: black;
+  composes: border from './variable.css';
   background-color: white;
   color: black;
   text-align: center;

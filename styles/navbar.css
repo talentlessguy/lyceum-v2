@@ -47,7 +47,7 @@
 }
 
 .nav_root_container {
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   border-color: black;
   background-color: #ffffff;
@@ -56,10 +56,20 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav {
+  position: static;
+  top: unset;
+  left: unset;
 }
 
 .ham_btn {
-  border: 2px solid black;
+  border: 1px solid black;
   background: white;
   box-shadow: none;
   height: 3rem;
@@ -94,7 +104,7 @@
     left: 3rem;
     width: auto;
     background: white;
-    border: 2px solid black;
+    border: 1px solid black;
   }
   .nav_root_container {
     padding: 0;

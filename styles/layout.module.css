@@ -19,14 +19,10 @@
   justify-self: left;
   min-width: 5.5rem;
   height: auto;
-  padding: 2.5rem;
+  padding: 2rem;
 }
-.sidebar hr {
-  margin: 3rem 0;
-}
-
 .sidebar a {
-  margin: 1rem 0;
+  margin: 2rem 0;
   display: block;
   height: max-content;
   text-underline-offset: 4px;
@@ -35,11 +31,11 @@
 
 .sidebar_right {
   justify-self: right;
-  right: 0;
 }
 
 .main {
   padding: 3rem;
+  padding-top: 0.75rem;
 }
 
 .main p,

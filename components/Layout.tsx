@@ -5,9 +5,18 @@ import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const pics = [
+type pic = {
+  width: number
+  height: number
+  url: string
+  alt: string
+  customData: {
+    link: string
+  }
+}
+
+const pics: pic[] = [
   {
-    filename: 'banner3.png',
     width: 112,
     height: 151,
     url: 'https://www.datocms-assets.com/39473/1612042036-banner3.png',
@@ -17,7 +26,6 @@ const pics = [
     }
   },
   {
-    filename: 'banner2.jpg',
     width: 225,
     height: 225,
     url: 'https://www.datocms-assets.com/39473/1612536764-banner2.png',
@@ -27,34 +35,48 @@ const pics = [
     }
   },
   {
-    filename: 'russianelectronicschool.jpg',
-    width: 1597,
-    height: 960,
-    url: 'https://www.datocms-assets.com/39473/1612042193-russianelectronicschool.jpg',
+    url: 'https://www.datocms-assets.com/39473/1612598424-logo.svg',
+    width: 117,
+    height: 128,
     alt: 'Российская электронная школа',
     customData: {
       link: 'https://resh.edu.ru/'
     }
   },
   {
-    filename: 'gosuslug.jpg',
-    width: 423,
-    height: 276,
-    url: 'https://www.datocms-assets.com/39473/1612042048-gosuslug.jpg',
+    url: 'https://www.datocms-assets.com/39473/1612598288-download-html.svg',
+    width: 193,
+    height: 212,
     alt: 'Госуслуги',
     customData: {
       link: 'https://www.gosuslugi.ru'
     }
   },
-
   {
-    filename: 'banner1.jpg',
-    width: 1181,
-    height: 661,
-    url: 'https://www.datocms-assets.com/39473/1612041503-banner1.jpg',
+    url: 'https://www.datocms-assets.com/39473/1612598990-pitanie1.jpeg',
+    width: 733,
+    height: 1024,
+    alt: 'Добродел',
+    customData: {
+      link: 'https://dobrodel.mosreg.ru/'
+    }
+  },
+  {
+    url: 'https://www.datocms-assets.com/39473/1612598589-logo-desktop.png',
+    width: 227,
+    height: 172,
     alt: 'Психологическая помощь',
     customData: {
       link: 'https://telefon-doveria.ru/'
+    }
+  },
+  {
+    url: 'https://www.datocms-assets.com/39473/1612599317-logo.png',
+    width: 450,
+    height: 451,
+    alt: 'Единое окно доступа к образовательным ресурсам',
+    customData: {
+      link: 'http://window.edu.ru/'
     }
   }
 ]
@@ -95,53 +117,27 @@ const Layout = ({
 }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => (
   <div className={grid} {...props}>
     <aside className={sidebar}>
-      <div>
-        {links.slice(0, 2).map(({ href, text }) => (
-          <Link {...{ href }} key={text}>
-            {text}
-          </Link>
-        ))}
-      </div>
-      <hr />
-      <div>
-        {pics.slice(0, 2).map((pic) => (
-          <a href={pic.customData.link} key={pic.alt}>
-            <Image
-              objectFit="contain"
-              src={pic.url}
-              height={pic.height}
-              width={pic.height}
-              alt={pic.alt}
-              quality={50}
-            />
-          </a>
-        ))}
-      </div>
+      {links.map(({ href, text }) => (
+        <Link {...{ href }} key={text}>
+          {text}
+        </Link>
+      ))}
     </aside>
     <main className={main}>{children}</main>
     <aside className={`${sidebar} ${sidebar_right}`}>
-      <div>
-        {links.slice(2).map(({ href, text }) => (
-          <Link {...{ href }} key={text}>
-            {text}
-          </Link>
-        ))}
-      </div>
-      <hr />
-      <div>
-        {pics.slice(2, 5).map((pic) => (
-          <a href={pic.customData.link} key={pic.alt}>
-            <Image
-              objectFit="contain"
-              src={pic.url}
-              height={pic.height}
-              width={pic.height}
-              alt={pic.alt}
-              quality={50}
-            />
-          </a>
-        ))}
-      </div>
+      {pics.map((pic) => (
+        <a href={pic.customData.link} key={pic.alt}>
+          <Image
+            title={pic.alt}
+            objectFit="contain"
+            src={pic.url}
+            height={pic.height}
+            width={pic.height}
+            alt={pic.alt}
+            quality={50}
+          />
+        </a>
+      ))}
     </aside>
   </div>
 )
