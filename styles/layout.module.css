@@ -2,7 +2,7 @@
   display: grid;
   width: 100%;
   grid-auto-flow: row;
-  grid-template-columns: 0.4fr 3fr 0.4fr;
+  grid-template-columns: 0.5fr 3fr 0.5fr;
   min-height: calc(100vh - 55px - 109px);
 }
 
@@ -17,9 +17,9 @@
   border-bottom: none;
   border-top: none;
   justify-self: left;
-  min-width: 5.5rem;
   height: auto;
   padding: 2rem;
+  min-width: 175px;
 }
 .sidebar a {
   margin: 2rem 0;
@@ -38,9 +38,10 @@
   padding-top: 0.75rem;
 }
 
-.main p,
-.main strong,
-.main a {
+.main .feed p,
+.main .feed strong,
+.main .feed a,
+.sidebar a {
   line-height: 1.75;
 }
 
