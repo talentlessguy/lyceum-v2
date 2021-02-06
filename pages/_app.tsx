@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'rc-pagination/assets/index.css'
 import '../styles/navbar.css'
-import '@openfonts/inter_cyrillic'
+import '@openfonts/work-sans_all'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
@@ -34,7 +34,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
             background: white;
           }
           * {
-            font-family: 'Inter', sans-serif !important;
+            font-family: 'Work Sans', 'Inter', sans-serif !important;
           }
           * {
             border-collapse: collapse;
