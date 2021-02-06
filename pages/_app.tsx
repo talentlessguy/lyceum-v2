@@ -35,7 +35,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
             background: white;
           }
           * {
-            font-family: 'Golos Text', 'Space Grotesk', 'Inter' !important;
+            font-family: 'Golos Text', 'Space Grotesk', 'Inter', sans-serif;
           }
           * {
             border-collapse: collapse;
