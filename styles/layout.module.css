@@ -56,8 +56,9 @@
     grid-template-columns: 1fr 1fr;
   }
   .sidebar {
-    width: unset;
+    padding: 2rem;
     border-left: none;
+    min-width: unset;
   }
   .sidebar_right {
     border-right: none;

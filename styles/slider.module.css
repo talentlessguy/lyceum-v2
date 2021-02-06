@@ -79,12 +79,6 @@
 }
 
 @media (max-width: 800px) {
-  .slider_container,
-  .slides,
-  .image,
-  .overlay_container {
-    height: 100vh;
-  }
   .overlay_container {
     padding: 2rem;
     width: unset;
