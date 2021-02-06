@@ -1,7 +1,7 @@
 import React from 'react'
 
 // @ts-ignore
-import { grid, sidebar, main, sidebar_right } from '../styles/layout.module.css'
+import { grid, sidebar, main, sidebar_right, sidebar_left } from '../styles/layout.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -116,7 +116,7 @@ const Layout = ({
   ...props
 }: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>) => (
   <div className={grid} {...props}>
-    <aside className={sidebar}>
+    <aside className={`${sidebar} ${sidebar_left}`}>
       {links.map(({ href, text }) => (
         <Link {...{ href }} key={text}>
           {text}
@@ -127,15 +127,7 @@ const Layout = ({
     <aside className={`${sidebar} ${sidebar_right}`}>
       {pics.map((pic) => (
         <a href={pic.customData.link} key={pic.alt}>
-          <Image
-            title={pic.alt}
-            objectFit="contain"
-            src={pic.url}
-            height={pic.height}
-            width={pic.height}
-            alt={pic.alt}
-            quality={50}
-          />
+          <Image title={pic.alt} src={pic.url} height={pic.height} width={pic.width} alt={pic.alt} quality={50} />
         </a>
       ))}
     </aside>

@@ -5,10 +5,11 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import 'rc-pagination/assets/index.css'
 import '../styles/navbar.css'
-import '@openfonts/work-sans_all'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
+import '@fontsource/space-grotesk'
+import '../public/font/font.css'
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
@@ -34,13 +35,14 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
             background: white;
           }
           * {
-            font-family: 'Work Sans', 'Inter', sans-serif !important;
+            font-family: 'Golos Text', 'Space Grotesk', 'Inter' !important;
           }
           * {
             border-collapse: collapse;
 
             scroll-behavior: smooth;
           }
+
           :root {
             --height: calc(100vh - 51px);
             --shadow: 0px 15px 50px rgba(0, 0, 0, 0.1);

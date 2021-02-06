@@ -1,3 +1,14 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertCenter {
+  composes: center;
+  flex-direction: column;
+}
+
 .grid {
   display: grid;
   width: 100%;
@@ -22,15 +33,25 @@
   min-width: 175px;
 }
 .sidebar a {
-  margin: 2rem 0;
   display: block;
   height: max-content;
   text-underline-offset: 4px;
   font-size: 14px;
 }
 
-.sidebar_right {
-  justify-self: right;
+.sidebar_left a {
+  margin: 1.5rem 0;
+}
+
+.sidebar_right a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+
+.sidebar_right img {
+  width: 100px;
 }
 
 .main {
@@ -77,17 +98,6 @@
 
 .main h1 {
   text-align: center;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.vertCenter {
-  composes: center;
-  flex-direction: column;
 }
 
 .floatImage {

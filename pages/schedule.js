@@ -187,121 +187,129 @@ const Schedule = () => {
             <td>время</td>
           </tr>
           <tr>
-            <td>
-              <p align="center">1</p>
-            </td>
+            <td align="center">1</td>
             <td>9:00 - 09:35</td>
-            <td>
-              <p align="center">
-                <span>1</span>
-              </p>
-            </td>
-            <td>
-              <p>
-                <span>09.00 – 9.35</span>
-              </p>
-            </td>
-            <td>
-              <p align="center">
-                <span>1</span>
-              </p>
-            </td>
-            <td>
-              <p>
-                <span>8:30 - 09:15</span>
-              </p>
-            </td>
+            <td align="center">1</td>
+            <td>09.00 – 9.35</td>
+            <td align="center">1</td>
+            <td>8:30 - 09:15</td>
           </tr>
           <tr>
-            <td>
-              <p align="center">2</p>
-            </td>
-            <td>
-              <p>
-                <span>09:50 - 10:25</span>
-              </p>
-            </td>
-            <td>
-              <p align="center">2</p>
-            </td>
+            <td align="center">2</td>
+            <td>09:50 - 10:25</td>
+            <td align="center">2</td>
             <td>09.50 – 10.25</td>
-            <td>
-              <p align="center">2</p>
-            </td>
-            <td>
-              <p>
-                <span>09:25 - 10:10</span>
-              </p>
-            </td>
+            <td align="center">2</td>
+            <td>09:25 - 10:10</td>
           </tr>
           <tr>
-            <td>
-              <p align="center">
-                <span>3</span>
-              </p>
-            </td>
-            <td>
-              <span>10:35 - 11:10</span>
-            </td>
-            <td>
-              <p align="center">
-                <span>3</span>
-              </p>
-            </td>
-            <td>
-              <p>
-                <span>10.45 – 11.30</span>
-              </p>
-            </td>
-            <td>
-              <p align="center">3</p>
-            </td>
+            <td align="center">3</td>
+            <td>10:35 - 11:10</td>
+            <td align="center">3</td>
+            <td>10.45 – 11.30</td>
+            <td align="center">3</td>
             <td>10:50 - 11:35</td>
           </tr>
           <tr>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
-            <td>
-              <p align="center">4</p>
-            </td>
-            <td>
-              <p>
-                <span>11.40 – 12.25</span>
-              </p>
-            </td>
-            <td>
-              <p align="center">
-                <span>4</span>
-              </p>
-            </td>
-            <td>
-              <p>
-                <span>11:45 - 12:30</span>
-              </p>
-            </td>
+            <td align="center">4</td>
+            <td>11.40 – 12.25</td>
+            <td align="center">4</td>
+            <td>11:45 - 12:30</td>
           </tr>
           <tr>
-            <td>
-              <span>&nbsp;</span>
-            </td>
-            <td>
-              <span>&nbsp;</span>
-            </td>
-            <td>
-              <span>&nbsp;</span>
-            </td>
-            <td>
-              <span>&nbsp;</span>
-            </td>
-            <td>
-              <p align="center">
-                <span>5</span>
-              </p>
-            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td align="center">5</td>
             <td>12:50 - 13:35</td>
           </tr>
         </tbody>
       </table>
+      <h3>2 - 11 классы</h3>
+      <table className={table}>
+        <thead>
+          <tr>
+            <th>№ урока</th>
+            <th>Время</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 урок</td>
+            <td>08:30 - 09:15</td>
+          </tr>
+          <tr>
+            <td>2 урок</td>
+            <td>09:35 - 10:20</td>
+          </tr>
+          <tr>
+            <td>3 урок</td>
+            <td>10:45 - 11:30</td>
+          </tr>
+          <tr>
+            <td>4 урок</td>
+            <td>11:40 - 12:25</td>
+          </tr>
+          <tr>
+            <td>5 урок</td>
+            <td>12:45 - 13:30</td>
+          </tr>
+          <tr>
+            <td>6 урок</td>
+            <td>13:40 - 14:25</td>
+          </tr>
+          <tr>
+            <td>7 урок</td>
+            <td>14:30 - 15:15</td>
+          </tr>
+          <tr>
+            <td>8 урок</td>
+            <td>15:20 - 15:55</td>
+          </tr>
+          <tr>
+            <td>9 урок</td>
+            <td>16:00 - 16:45</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Продолжительность элективных занятий - 45 минут.</p>
+      <p>Перерыв между обязательными и дополнительными занятиями – 30 - 40 минут.</p>
+      <p>
+        <a href="http://liceym2.ru/images/Document/Polozheniya2020-2021/Prikaz_109_28.09.2020.pdf">
+          Приказ &quot;Об утверждении учебно - календарного плана, графика работы в МБОУ Лицей №2 в 2020 - 2021 учебном
+          году&quot; №109 от 28 августа 2020 г.{' '}
+        </a>
+      </p>
+      <h2>Итоговый контроль в переводных классах (промежуточная аттестация)</h2>
+      <p>с 14 по 29 мая 2021 года:</p>
+      <ul
+        style={{
+          lineHeight: 2
+        }}
+      >
+        <li>
+          <strong>2-7 классы</strong> - в форме контрольных работ, тестов;
+        </li>
+        <li>
+          <strong>8 классы</strong> - в форме контрольных работ, тестов;
+        </li>
+        <li>
+          <strong>10 классы</strong> - в форме тестового контроля по КИМам - аналогам ЕГЭ.
+        </li>
+      </ul>
+      <h2>Линейки последнего звонка</h2>
+      <p>
+        9 классы, 11 классы – с учетом расписания государственной итоговой аттестации в новой форме в 9-х классах и в
+        форме ЕГЭ в 11 классах.
+      </p>
+      <h2>Выпускные экзамены</h2>
+      <p>
+        в 9-х и 11-х классах проводятся в сроки, установленные министерством образования РФ и Министерством образования
+        Московской области.
+      </p>
     </Layout>
   )
 }

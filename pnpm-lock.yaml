@@ -1,5 +1,6 @@
 dependencies:
-  '@openfonts/work-sans_all': 1.0.1
+  '@fontsource/space-grotesk': 4.1.1
+  '@openfonts/arimo_cyrillic': 1.44.2
   clsx: 1.1.1
   graphql: 15.5.0
   graphql-request: 3.4.0_graphql@15.5.0
@@ -1030,6 +1031,10 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-1JTKgrOKAHVivSvOYw+sJOunkBjUOvjqWk1DPja7ZFhIS2mX/4EgTT8M7eTK9jrKhL/FvXXEbQwIs3pg1xp3dg==
+  /@fontsource/space-grotesk/4.1.1:
+    dev: false
+    resolution:
+      integrity: sha512-hI092swSY+CVJrn3bPVYCUvUvGbZiGH8oHIh7UKddP2TBHtFIIRD4AURAAwTUCymoJzY4fkWU9vuaSVGyTS+qQ==
   /@hapi/accept/5.0.1:
     dependencies:
       '@hapi/boom': 9.1.1
@@ -1146,10 +1151,10 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-8Broas6vTtW4GIXTAHDoE32hnN2M5ykgCpWGbuXHQ15vEMqr23pB76e/GZcYsZCHALv50ktd24qhEyKr6wBtow==
-  /@openfonts/work-sans_all/1.0.1:
+  /@openfonts/arimo_cyrillic/1.44.2:
     dev: false
     resolution:
-      integrity: sha512-+DNIa2sVSTGb9rCroWrUNDMLnakD9h9XBmRrQIuJH0IHP3dDZEk1nqtvdknNTZ8DbOu0rumxqLjIJTUfpmXG9Q==
+      integrity: sha512-Cj9KXavLFjW5/sxWW194CSAJLrGJmRwtKeDiq9CVfRe7IPzFPzwsHZPZO3Eu4zy9BoDqsBz9dIJY/ak09M7fAw==
   /@opentelemetry/api/0.14.0:
     dependencies:
       '@opentelemetry/context-base': 0.14.0
@@ -7203,7 +7208,8 @@ packages:
     resolution:
       integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
 specifiers:
-  '@openfonts/work-sans_all': ^1.0.1
+  '@fontsource/space-grotesk': ^4.1.1
+  '@openfonts/arimo_cyrillic': ^1.44.2
   '@types/node': ^14.14.22
   '@types/react': ^17.0.0
   '@types/react-slick': ^0.23.4
