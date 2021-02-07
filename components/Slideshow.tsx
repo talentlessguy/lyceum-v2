@@ -38,6 +38,7 @@ const Slideshow = ({ images }: { images: any[] }) => {
 
   return (
     <Carousel
+      speed={1450}
       wrapAround
       className={slides}
       autoplay
