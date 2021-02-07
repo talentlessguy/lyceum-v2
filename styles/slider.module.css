@@ -86,6 +86,10 @@
     width: unset;
   }
 
+  .slider_container h1 {
+    letter-spacing: unset;
+  }
+
   .learnMoreLink {
     right: 50px;
     bottom: 50px;

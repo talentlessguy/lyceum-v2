@@ -59,10 +59,10 @@
   padding-top: 0.75rem;
 }
 
-.main .feed p,
-.main .feed strong,
 .main .feed a,
-.sidebar a {
+.sidebar a,
+.main p,
+.main strong {
   line-height: 1.75;
 }
 
