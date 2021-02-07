@@ -13,7 +13,6 @@ dependencies:
   react-multi-level-nav: 0.0.6
   react-responsive-masonry: 2.1.1_react-dom@17.0.1
   react-slick: 0.28.0_react-dom@17.0.1
-  react-super-responsive-table: 5.2.0_react-dom@17.0.1
   remark-gfm: 1.0.0
   slick-carousel: 1.8.1
 devDependencies:
@@ -5578,15 +5577,6 @@ packages:
       react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
     resolution:
       integrity: sha512-/EZI9FOVFo9PseQKOw08K/lVT/T81rkVJkCDGCQbDGbg4irSMALaoesBMmAZie2YALuMlKHdzDsqioNtkmJKVg==
-  /react-super-responsive-table/5.2.0_react-dom@17.0.1:
-    dependencies:
-      react-dom: 17.0.1
-    dev: false
-    peerDependencies:
-      prop-types: '>= 15'
-      react-dom: ^16.9.0 || ^17.0.0
-    resolution:
-      integrity: sha512-gC6QX/+HNt7d5QDvhp83Q8AV8/44mbeRo4Z4UQ9KfBbY9dyHkQZUXRbaWPFp6CHmfSyVlJaRseTHzwMKmJjRKA==
   /react/17.0.1:
     dependencies:
       loose-envify: 1.4.0
@@ -7197,7 +7187,6 @@ specifiers:
   react-multi-level-nav: ^0.0.6
   react-responsive-masonry: ^2.1.1
   react-slick: ^0.28.0
-  react-super-responsive-table: ^5.2.0
   remark-gfm: ^1.0.0
   slick-carousel: ^1.8.1
   typescript: ^4.1.3
