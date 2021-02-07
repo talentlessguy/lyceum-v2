@@ -15,7 +15,7 @@ export default function Footer() {
       {router.pathname === '/' && (
         <ExternalLink href="https://v1rtl.site">
           <img
-            src="https://v1rtl.site/emoji.gif"
+            src="https://v1rtl.site/emoji.webp"
             alt="made by v1rtl"
             width="30px"
             style={{
