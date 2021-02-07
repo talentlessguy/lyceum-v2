@@ -17,8 +17,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
 
     if (location.pathname !== '/') {
       window.scrollTo({
-        top: 0,
-        behavior: 'auto'
+        top: 0
       })
     }
   }, [])
