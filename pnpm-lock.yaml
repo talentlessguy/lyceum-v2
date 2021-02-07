@@ -1,14 +1,15 @@
 dependencies:
   '@openfonts/arimo_cyrillic': 1.44.2
   clsx: 1.1.1
-  embla-carousel: 4.1.3
   graphql: 15.5.0
   graphql-request: 3.4.0_graphql@15.5.0
   next: 10.0.7-canary.5_ab3b038e05c538ef0eed5445ef5f8b90
   next-images: 1.7.0_webpack@4.46.0
   next-pwa: 5.0.5_23a9858cdfb48435f641fee61cf73a6e
+  nuka-carousel: 4.7.5_react-dom@17.0.1
   rc-pagination: 3.1.3_react-dom@17.0.1
   react: 17.0.1
+  react-datocms: 1.5.0
   react-dom: 17.0.1
   react-markdown: 5.0.3_@types+react@17.0.1
   react-multi-level-nav: 0.0.6
@@ -1254,7 +1255,6 @@ packages:
     resolution:
       integrity: sha512-EPpXLOVqDvisVxtlbvzfyqSsFeQxltFbluZNRndIb8tr9KiBnYNLzrc1N3pyKUCww2RNrfHDViqDWWE1LCJQtQ==
   /@types/prop-types/15.7.3:
-    dev: true
     resolution:
       integrity: sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
   /@types/react-slick/0.23.4:
@@ -1267,7 +1267,6 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.3
       csstype: 3.0.6
-    dev: true
     resolution:
       integrity: sha512-w8t9f53B2ei4jeOqf/gxtc2Sswnc3LBK5s0DyJcg5xd10tMHXts2N31cKjWfH9IC/JvEPa/YF1U4YeP1t4R6HQ==
   /@types/resolve/1.17.1:
@@ -2533,20 +2532,47 @@ packages:
     dev: false
     resolution:
       integrity: sha512-4slyYc1w4JhSbhVX5xi9G0aQ42JnRyPg+7l7cqoNyoIDzfWx40Rq3JQZnoAWDu60A4AvKVp9ln/YSUOdhDX68g==
+  /csstype/2.6.14:
+    dev: false
+    resolution:
+      integrity: sha512-2mSc+VEpGPblzAxyeR+vZhJKgYg0Og0nnRi7pmRXFYYxSfnOnW8A5wwQb4n4cE2nIOzqKOAzLCaEX6aBmNEv8A==
   /csstype/3.0.6:
-    dev: true
     resolution:
       integrity: sha512-+ZAmfyWMT7TiIlzdqJgjMb7S4f1beorDbWbsocyK4RaiqA5RTX3K14bnBWmmA9QEM0gRdsjyyrEmcyga8Zsxmw==
   /cyclist/1.0.1:
     dev: true
     resolution:
       integrity: sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
+  /d3-ease/1.0.7:
+    dev: false
+    resolution:
+      integrity: sha512-lx14ZPYkhNx0s/2HX5sLFUI3mbasHjSSpwO/KaaNACweVwxUruKyWVcb293wMv1RqTPZyZ8kSZ2NogUZNcLOFQ==
+  /d3-timer/1.0.10:
+    dev: false
+    resolution:
+      integrity: sha512-B1JDm0XDaQC+uvo4DT79H0XmBskgS3l6Ve+1SBCfxgmtIb1AVrPIoqd+nPSv+loMX8szQ0sVUhGngL7D5QPiXw==
   /data-uri-to-buffer/3.0.1:
     dev: false
     engines:
       node: '>= 6'
     resolution:
       integrity: sha512-WboRycPNsVw3B3TL559F7kuBUM4d8CgMEvk6xEJlOp7OBPjt6G7z8WMWlD2rOFZLk6OYfFIUGsCOWzcQH9K2og==
+  /datocms-listen/0.1.3:
+    dev: false
+    resolution:
+      integrity: sha512-k1UfXMdPqZgKw/6Q6TXSXLbrwKzXpbsaG/d1/9H7sKMbWD87HU7FT6ilNFjda7ODPLZozC1SmF2GEHXg83MfPQ==
+  /datocms-structured-text-generic-html-renderer/1.0.1:
+    dependencies:
+      datocms-structured-text-utils: 1.0.1
+    dev: false
+    resolution:
+      integrity: sha512-j8Y94keI8qGqOzy7u3wml+H8yK1iyky1TDhHmXIbFN8B0OXuajXOrvvYOCnSBysJEXopOuA6m+knF+NtYXvHmw==
+  /datocms-structured-text-utils/1.0.1:
+    dependencies:
+      lodash.flatten: 4.4.0
+    dev: false
+    resolution:
+      integrity: sha512-1GmR8wj6VHyUHZ9QVtW6gf389VbbWZrY9nJ82dj0OYq2nf2TB2Bv4gF8o+nPhohutNBVF0Rr8ZF2hyqX+CDHTg==
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -2675,6 +2701,12 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
+  /dequal/2.0.2:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-q9K8BlJVxK7hQYqa6XISGmBZbtQQWVXSrRrWreHC94rMt1QL/Impruc+7p2CYSYuVIUr+YCt6hjrs1kkdJRTug==
   /des.js/1.0.1:
     dependencies:
       inherits: 2.0.4
@@ -2814,10 +2846,6 @@ packages:
       minimalistic-crypto-utils: 1.0.1
     resolution:
       integrity: sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==
-  /embla-carousel/4.1.3:
-    dev: false
-    resolution:
-      integrity: sha512-9mX8h8SVRi9szOB6RIcSZuAPl1NgWa1+2KRRXFDWUy0ER+6BOgYvVHmunNkjLM/yg9VElAxL5PNmc+YccKeFtQ==
   /emoji-regex/8.0.0:
     dev: true
     resolution:
@@ -3111,6 +3139,10 @@ packages:
       safe-buffer: 5.2.1
     resolution:
       integrity: sha512-/f2Go4TognH/KvCISP7OUsHn85hT9nUkxxA9BEWxFn+Oj9o8ZNLm/40hdlgSLyuOimsrTKLUMEorQexp/aPQeA==
+  /exenv/1.2.2:
+    dev: false
+    resolution:
+      integrity: sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
   /expand-brackets/2.1.4:
     dependencies:
       debug: 2.6.9
@@ -3785,6 +3817,10 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-O0DB1JC/sPyZl7cIo78n5dR7eUSwwpYPiXRhTzNxZVAMUuB8vlnRFyLxdrVToks6XPLVnFfbzaVd5WLjhgg+vA==
+  /intersection-observer/0.10.0:
+    dev: false
+    resolution:
+      integrity: sha512-fn4bQ0Xq8FTej09YC/jqKZwtijpvARlRp6wxL5WTA6yPe2YWSJ5RJh7Nm79rK2qB0wr6iDQzH60XGq5V/7u8YQ==
   /is-accessor-descriptor/0.1.6:
     dependencies:
       kind-of: 3.2.2
@@ -4194,6 +4230,12 @@ packages:
       node: '>=4.0'
     resolution:
       integrity: sha512-EIsmt3O3ljsU6sot/J4E1zDRxfBNrhjyf/OKjlydwgEimQuznlM4Wv7U+ueONJMyEn1WRE0K8dhi3dVAXYT24Q==
+  /kapellmeister/3.0.1:
+    dependencies:
+      d3-timer: 1.0.10
+    dev: false
+    resolution:
+      integrity: sha512-S7+gYcziMREv8RxG46138mb1O4Xf9II/bCxEJPYkhlZ7PgGWTlicgsyNad/DGc5oEAlWGLXE5ExLbTDVvJmgDA==
   /kind-of/3.2.2:
     dependencies:
       is-buffer: 1.1.6
@@ -4320,6 +4362,10 @@ packages:
   /lodash.camelcase/4.3.0:
     resolution:
       integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
+  /lodash.flatten/4.4.0:
+    dev: false
+    resolution:
+      integrity: sha1-8xwiIlqWMtK7+OSt2+8kCqdlph8=
   /lodash.sortby/4.7.0:
     dev: false
     resolution:
@@ -4926,6 +4972,20 @@ packages:
     optional: true
     resolution:
       integrity: sha512-2uUqazuKlTaSI/dC8AzicUck7+IrEaOnN/e0jd3Xtt1KcGpwx30v50mL7oPyr/h9bL3E4aZccVwpwP+5W9Vjkg==
+  /nuka-carousel/4.7.5_react-dom@17.0.1:
+    dependencies:
+      csstype: 2.6.14
+      d3-ease: 1.0.7
+      exenv: 1.2.2
+      prop-types: 15.7.2
+      react-dom: 17.0.1
+      react-move: 6.4.0
+      wicg-inert: 3.1.0
+    dev: false
+    peerDependencies:
+      react-dom: ^0.14.9 || ^15.3.0 || ^16.0.0
+    resolution:
+      integrity: sha512-E5zsWgRZQxNz6lJaaioz+/3aTJr5pAAkZpxTIW+lK+9OpGz813rGEGEroO9FzHhnMGhV7KcuUnQ8bJgdoUq+1w==
   /number-is-nan/1.0.1:
     dev: false
     engines:
@@ -5506,6 +5566,17 @@ packages:
     optional: true
     resolution:
       integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
+  /react-datocms/1.5.0:
+    dependencies:
+      datocms-listen: 0.1.3
+      datocms-structured-text-generic-html-renderer: 1.0.1
+      datocms-structured-text-utils: 1.0.1
+      intersection-observer: 0.10.0
+      react-intersection-observer: 8.31.0
+      use-deep-compare-effect: 1.6.1
+    dev: false
+    resolution:
+      integrity: sha512-Gj/NXgpYUZKz7NEueuav4xf5yeUWl9ukW+tPlUMHrHBMtpyKx9ipVgccmWRngblyIqkOuaV3QSg3YBxE9KkaQA==
   /react-dom/17.0.1:
     dependencies:
       loose-envify: 1.4.0
@@ -5514,6 +5585,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+  /react-intersection-observer/8.31.0:
+    dev: false
+    resolution:
+      integrity: sha512-XraIC/tkrD9JtrmVA7ypEN1QIpKc52mXBH1u/bz/aicRLo8QQEJQAMUTb8mz4B6dqpPwyzgjrr7Ljv/2ACDtqw==
   /react-is/16.13.1:
     resolution:
       integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
@@ -5535,6 +5610,14 @@ packages:
       '@types/react': '>=16'
     resolution:
       integrity: sha512-jDWOc1AvWn0WahpjW6NK64mtx6cwjM4iSsLHJPNBqoAgGOVoIdJMqaKX4++plhOtdd4JksdqzlDibgPx6B/M2w==
+  /react-move/6.4.0:
+    dependencies:
+      '@babel/runtime': 7.12.13
+      kapellmeister: 3.0.1
+      prop-types: 15.7.2
+    dev: false
+    resolution:
+      integrity: sha512-TNyDQESDZ0xsejnxFTQ9CKarJQN6NbgpImrvIEzOVe7+jt8y7uTjJwWxqFTfmvwskIs+RmUbCWdN7PAbGyhrdA==
   /react-multi-level-nav/0.0.6:
     dev: false
     resolution:
@@ -6776,6 +6859,17 @@ packages:
       querystring: 0.2.0
     resolution:
       integrity: sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE=
+  /use-deep-compare-effect/1.6.1:
+    dependencies:
+      '@babel/runtime': 7.12.13
+      '@types/react': 17.0.1
+      dequal: 2.0.2
+    dev: false
+    engines:
+      node: '>=10'
+      npm: '>=6'
+    resolution:
+      integrity: sha512-VB3b+7tFI81dHm8buGyrpxi8yBhzYZdyMX9iBJra7SMFMZ4ci4FJ1vFc1nvChiB1iLv4GfjqaYfvbNEpTT1rFQ==
   /use-subscription/1.5.1:
     dependencies:
       object-assign: 4.1.1
@@ -6921,6 +7015,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==
+  /wicg-inert/3.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-P0ZiWaN9SxOkJbYtF/PIwmIRO8UTqTJtyl33QTQlHfAb6h15T0Dp5m7WTJ8N6UWIoj+KU5M0a8EtfRZLlHiP0Q==
   /wide-align/1.1.3:
     dependencies:
       string-width: 1.0.2
@@ -7134,7 +7232,6 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^4.14.2
   '@typescript-eslint/parser': ^4.14.2
   clsx: ^1.1.1
-  embla-carousel: ^4.1.3
   eslint: ^7.19.0
   eslint-plugin-react: ^7.22.0
   eslint-plugin-react-hooks: ^4.2.0
@@ -7143,8 +7240,10 @@ specifiers:
   next: ^10.0.7-canary.3
   next-images: ^1.7.0
   next-pwa: ^5.0.5
+  nuka-carousel: ^4.7.5
   rc-pagination: ^3.1.3
   react: ^17.0.1
+  react-datocms: ^1.5.0
   react-dom: ^17.0.1
   react-markdown: ^5.0.3
   react-multi-level-nav: ^0.0.6

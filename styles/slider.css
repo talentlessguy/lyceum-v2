@@ -1,0 +1,16 @@
+.slider-control-centerleft,
+.slider-control-centerright,
+.slider-control-bottomcenter {
+  z-index: 10;
+}
+
+@media (max-width: 800px) {
+  .slider-control-centerleft,
+  .slider-control-centerright {
+    top: 80% !important;
+  }
+}
+
+.paging-item svg {
+  fill: white;
+}

@@ -96,18 +96,37 @@ const Index = ({
     count: number
   }
 }) => {
-  const [images, setImages] = useState<images>([])
+  const [images, setImages] = useState([])
 
   useEffect(() => {
     const GET_SLIDER_IMAGES = /* GraphQL */ `
       {
         allUploads(filter: { tags: { eq: "slider" } }) {
-          url
-          filename
+          responsiveImage {
+            srcSet
+            webpSrcSet
+            sizes
+            src
+
+            # size information (post-transformations)
+            width
+            height
+            aspectRatio
+
+            # SEO attributes
+            alt
+            title
+
+            # background color placeholder or...
+            bgColor
+
+            # blur-up placeholder, JPEG format, base64-encoded
+            base64
+          }
         }
       }
     `
-    request<{ allUploads: images }>({ query: GET_SLIDER_IMAGES }).then(({ allUploads }) => {
+    request<{ allUploads: unknown[] }>({ query: GET_SLIDER_IMAGES }).then(({ allUploads }) => {
       setImages(allUploads)
     })
   }, [])

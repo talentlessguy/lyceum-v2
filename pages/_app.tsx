@@ -5,9 +5,9 @@ import NavBar from '../components/NavBar'
 // import 'slick-carousel/slick/slick-theme.css'
 import 'rc-pagination/assets/index.css'
 import '../styles/navbar.css'
-import '../styles/embla.css'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
+import '../styles/slider.css'
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {

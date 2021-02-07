@@ -1,6 +1,5 @@
 .slider_container {
   position: relative;
-  user-select: none;
   height: var(--height);
 }
 
@@ -39,10 +38,10 @@
   overflow: hidden;
 }
 
-.image {
+.image img {
   height: var(--height);
-  position: relative;
-  min-width: 100%;
+  filter: brightness(70%);
+  object-fit: cover !important;
 }
 
 .overlay_container {
@@ -91,4 +90,16 @@
     right: 50px;
     bottom: 50px;
   }
+}
+
+.slider_btn {
+  border: none;
+  background: none;
+  color: white;
+  font-weight: bold;
+  font-family: 'Golos UI', sans-serif !important;
+  font-weight: bold;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
 }
