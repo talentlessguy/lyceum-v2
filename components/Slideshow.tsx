@@ -90,7 +90,7 @@ const Slideshow = ({ images }: { images: { url: string }[] }) => {
           {images.map(({ url }) => (
             <div className="embla__slide" key={url}>
               <div className="embla__slide__inner">
-                <Image quality={100} src={url} className="embla__slide__img" layout="fill" />
+                <Image quality={90} src={url} className="embla__slide__img" layout="fill" />
               </div>
             </div>
           ))}
