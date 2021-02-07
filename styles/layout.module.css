@@ -71,7 +71,7 @@
 @media (max-width: 800px) {
   .main {
     grid-column: 1 / 4;
-    padding: 1.25rem;
+    padding: 0.75rem;
   }
   .grid {
     grid-template-rows: auto auto;
