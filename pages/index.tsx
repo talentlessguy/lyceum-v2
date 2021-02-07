@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { vertCenter } from '../styles/layout.module.css'
 import * as styles from '../styles/slider.module.css'
 import Slideshow from '../components/Slideshow'
@@ -81,7 +81,8 @@ const PostLink = ({ content, id }: { id: number; content: PostProps }) => {
 
 const Index = ({
   allPosts,
-  _allPostsMeta
+  _allPostsMeta,
+  allUploads
 }: {
   allPosts: {
     content: PostProps
@@ -90,11 +91,14 @@ const Index = ({
   _allPostsMeta: {
     count: number
   }
+  allUploads: {
+    url: string
+  }[]
 }) => (
   <>
     {/* @ts-ignore */}
     <div className={styles.slider_container}>
-      <Slideshow />
+      <Slideshow images={allUploads} />
       <div className={styles.overlay_container}>
         <div className={styles.box}>
           <h1>МБОУ Лицей №2</h1>
@@ -143,6 +147,11 @@ const GET_ALL_POSTS = /* GraphQL */ `
 
     _allPostsMeta {
       count
+    }
+
+    allUploads(filter: { tags: { eq: "slider" } }) {
+      url
+      filename
     }
   }
 `

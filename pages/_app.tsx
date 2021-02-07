@@ -1,10 +1,11 @@
 import React, { Fragment, useEffect } from 'react'
 import Head from 'next/head'
 import NavBar from '../components/NavBar'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+// import 'slick-carousel/slick/slick.css'
+// import 'slick-carousel/slick/slick-theme.css'
 import 'rc-pagination/assets/index.css'
 import '../styles/navbar.css'
+import '../styles/embla.css'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
 

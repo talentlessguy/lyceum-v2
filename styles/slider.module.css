@@ -40,12 +40,9 @@
 }
 
 .image {
-  background-size: cover;
   height: var(--height);
-  width: 100%;
-  background-blend-mode: darken;
-
-  background-color: rgba(60, 63, 73, 0.6);
+  position: relative;
+  min-width: 100%;
 }
 
 .overlay_container {

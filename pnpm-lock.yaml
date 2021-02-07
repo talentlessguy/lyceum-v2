@@ -1,6 +1,7 @@
 dependencies:
   '@openfonts/arimo_cyrillic': 1.44.2
   clsx: 1.1.1
+  embla-carousel: 4.1.3
   graphql: 15.5.0
   graphql-request: 3.4.0_graphql@15.5.0
   next: 10.0.7-canary.5_ab3b038e05c538ef0eed5445ef5f8b90
@@ -12,9 +13,7 @@ dependencies:
   react-markdown: 5.0.3_@types+react@17.0.1
   react-multi-level-nav: 0.0.6
   react-responsive-masonry: 2.1.1_react-dom@17.0.1
-  react-slick: 0.28.0_react-dom@17.0.1
   remark-gfm: 1.0.0
-  slick-carousel: 1.8.1
 devDependencies:
   '@types/node': 14.14.25
   '@types/react': 17.0.1
@@ -2815,6 +2814,10 @@ packages:
       minimalistic-crypto-utils: 1.0.1
     resolution:
       integrity: sha512-iLhC6ULemrljPZb+QutR5TQGB+pdW6KGD5RSegS+8sorOZT+rdQFbsQFJgvN3eRqNALqJer4oQ16YvJHlU8hzQ==
+  /embla-carousel/4.1.3:
+    dev: false
+    resolution:
+      integrity: sha512-9mX8h8SVRi9szOB6RIcSZuAPl1NgWa1+2KRRXFDWUy0ER+6BOgYvVHmunNkjLM/yg9VElAxL5PNmc+YccKeFtQ==
   /emoji-regex/8.0.0:
     dev: true
     resolution:
@@ -2844,10 +2847,6 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-Nv9m36S/vxpsI+Hc4/ZGRs0n9mXqSWGGq49zxb/cJfPAQMbUtttJAlNPS4AQzaBdw/pKskw5bMbekT/Y7W/Wlg==
-  /enquire.js/2.1.6:
-    dev: false
-    resolution:
-      integrity: sha1-PoeAybi4NQhMP2DhZtvDwqPImBQ=
   /enquirer/2.3.6:
     dependencies:
       ansi-colors: 4.1.1
@@ -4158,12 +4157,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=
-  /json2mq/0.2.0:
-    dependencies:
-      string-convert: 0.2.1
-    dev: false
-    resolution:
-      integrity: sha1-tje9O6nqvhIsg+lyBIOusQ0skEo=
   /json5/0.5.1:
     dev: true
     hasBin: true
@@ -4327,10 +4320,6 @@ packages:
   /lodash.camelcase/4.3.0:
     resolution:
       integrity: sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
-  /lodash.debounce/4.0.8:
-    dev: false
-    resolution:
-      integrity: sha1-gteb/zCmfEAF/9XiUVMArZyk168=
   /lodash.sortby/4.7.0:
     dev: false
     resolution:
@@ -5564,19 +5553,6 @@ packages:
       react-dom: ^16.8.0
     resolution:
       integrity: sha512-ec39c5Ot/p8tcjOIBn6pORybHD3870hXZ332Xk1dK5Ky+lNAj7S8giRWSDr5PLaCKQvaf+4Xje3hIQH3D0By1Q==
-  /react-slick/0.28.0_react-dom@17.0.1:
-    dependencies:
-      classnames: 2.2.6
-      enquire.js: 2.1.6
-      json2mq: 0.2.0
-      lodash.debounce: 4.0.8
-      react-dom: 17.0.1
-      resize-observer-polyfill: 1.5.1
-    dev: false
-    peerDependencies:
-      react-dom: ^0.14.0 || ^15.0.1 || ^16.0.0 || ^17.0.0
-    resolution:
-      integrity: sha512-/EZI9FOVFo9PseQKOw08K/lVT/T81rkVJkCDGCQbDGbg4irSMALaoesBMmAZie2YALuMlKHdzDsqioNtkmJKVg==
   /react/17.0.1:
     dependencies:
       loose-envify: 1.4.0
@@ -5733,10 +5709,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-AKCUD5jNUBrqqsMWQR2a3FKzGrE=
-  /resize-observer-polyfill/1.5.1:
-    dev: false
-    resolution:
-      integrity: sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
   /resolve-from/3.0.0:
     dev: true
     engines:
@@ -6037,12 +6009,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==
-  /slick-carousel/1.8.1:
-    dev: false
-    peerDependencies:
-      jquery: '>=1.8.0'
-    resolution:
-      integrity: sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
   /snapdragon-node/2.1.1:
     dependencies:
       define-property: 1.0.0
@@ -6199,10 +6165,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==
-  /string-convert/0.2.1:
-    dev: false
-    resolution:
-      integrity: sha1-aYLMMEn7tM2F+LJFaLnZvznu/5c=
   /string-hash/1.1.3:
     dev: false
     resolution:
@@ -7172,6 +7134,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^4.14.2
   '@typescript-eslint/parser': ^4.14.2
   clsx: ^1.1.1
+  embla-carousel: ^4.1.3
   eslint: ^7.19.0
   eslint-plugin-react: ^7.22.0
   eslint-plugin-react-hooks: ^4.2.0
@@ -7186,9 +7149,7 @@ specifiers:
   react-markdown: ^5.0.3
   react-multi-level-nav: ^0.0.6
   react-responsive-masonry: ^2.1.1
-  react-slick: ^0.28.0
   remark-gfm: ^1.0.0
-  slick-carousel: ^1.8.1
   typescript: ^4.1.3
   typescript-plugin-css-modules: ^3.1.0
   webpack: '4'
