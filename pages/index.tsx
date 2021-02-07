@@ -5,7 +5,7 @@ import Slideshow from '../components/Slideshow'
 import Post, { PostProps } from '../components/Post'
 import Layout from '../components/Layout'
 import { request } from '../lib/cms'
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import PagesCounter from 'rc-pagination'
 import Grid from '../components/Grid'
@@ -79,10 +79,13 @@ const PostLink = ({ content, id }: { id: number; content: PostProps }) => {
   )
 }
 
+type images = {
+  url: string
+}[]
+
 const Index = ({
   allPosts,
-  _allPostsMeta,
-  allUploads
+  _allPostsMeta
 }: {
   allPosts: {
     content: PostProps
@@ -91,44 +94,59 @@ const Index = ({
   _allPostsMeta: {
     count: number
   }
-  allUploads: {
-    url: string
-  }[]
-}) => (
-  <>
-    {/* @ts-ignore */}
-    <div className={styles.slider_container}>
-      <Slideshow images={allUploads} />
-      <div className={styles.overlay_container}>
-        <div className={styles.box}>
-          <h1>МБОУ Лицей №2</h1>
-          <span>
-            муниципальное бюджетное общеобразовательное учреждение <br />
-            г. Протвино, Московская область
-          </span>
+}) => {
+  const [images, setImages] = useState([])
+
+  useEffect(() => {
+    const GET_SLIDER_IMAGES = /* GraphQL */ `
+      {
+        allUploads(filter: { tags: { eq: "slider" } }) {
+          url
+          filename
+        }
+      }
+    `
+    request<{ allUploads: images }>({ query: GET_SLIDER_IMAGES }).then(({ allUploads }) => {
+      setImages(allUploads)
+    })
+  }, [])
+
+  return (
+    <>
+      {/* @ts-ignore */}
+      <div className={styles.slider_container}>
+        <Slideshow images={images} />
+        <div className={styles.overlay_container}>
+          <div className={styles.box}>
+            <h1>МБОУ Лицей №2</h1>
+            <span>
+              муниципальное бюджетное общеобразовательное учреждение <br />
+              г. Протвино, Московская область
+            </span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <Layout>
-      <h1
-        id="news"
-        style={{
-          scrollMarginTop: '100px'
-        }}
-      >
-        Новости
-      </h1>
+      <Layout>
+        <h1
+          id="news"
+          style={{
+            scrollMarginTop: '100px'
+          }}
+        >
+          Новости
+        </h1>
 
-      <Grid>
-        {allPosts.map(({ content, id }) => (
-          <PostLink key={id} {...{ content, id }} />
-        ))}
-      </Grid>
-      <Pagination count={_allPostsMeta.count} />
-    </Layout>
-  </>
-)
+        <Grid>
+          {allPosts.map(({ content, id }) => (
+            <PostLink key={id} {...{ content, id }} />
+          ))}
+        </Grid>
+        <Pagination count={_allPostsMeta.count} />
+      </Layout>
+    </>
+  )
+}
 
 const GET_ALL_POSTS = /* GraphQL */ `
   query IndexPage($limit: IntType, $skip: IntType) {
@@ -147,11 +165,6 @@ const GET_ALL_POSTS = /* GraphQL */ `
 
     _allPostsMeta {
       count
-    }
-
-    allUploads(filter: { tags: { eq: "slider" } }) {
-      url
-      filename
     }
   }
 `
