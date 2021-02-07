@@ -112,7 +112,7 @@ const Index = ({
 
 const GET_ALL_POSTS = /* GraphQL */ `
   query IndexPage($limit: IntType, $skip: IntType) {
-    allPosts(first: $limit, orderBy: createdAt_ASC, skip: $skip) {
+    allPosts(first: $limit, orderBy: createdAt_DESC, skip: $skip) {
       content {
         pictures {
           url
