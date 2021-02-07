@@ -30,7 +30,7 @@
   justify-self: left;
   height: auto;
   padding: 2rem;
-  max-width: 175px;
+  min-width: 175px;
 }
 .sidebar a {
   display: block;
@@ -80,6 +80,7 @@
     padding: 2rem;
     border-left: none;
     min-width: unset;
+    width: calc(100% - 4rem);
   }
   .sidebar_right {
     border-right: none;

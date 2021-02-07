@@ -122,6 +122,10 @@ const links: linksObject = {
     {
       href: 'http://liceym2.ru/index.php/deyatelnost/videostudiya',
       text: 'Видеостудия'
+    },
+    {
+      text: 'ЭРУДИТ',
+      href: 'http://liceym2.ru/index.php/deyatelnost/erudit'
     }
   ],
 
