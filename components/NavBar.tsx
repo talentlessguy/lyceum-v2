@@ -68,6 +68,14 @@ const links: linksObject = {
     {
       text: 'Социально-психологическая служба',
       href: 'http://liceym2.ru/index.php/usloviya/sotsialno-psikhologicheskaya-sluzhba'
+    },
+    {
+      text: 'Электронный дневник',
+      href: 'http://liceym2.ru/index.php/usloviya/elektronnyj-dnevnik'
+    },
+    {
+      text: 'Служба медиации',
+      href: 'http://liceym2.ru/index.php/usloviya/252-sluzhba-mediatsii'
     }
   ],
   activity: [
@@ -80,16 +88,40 @@ const links: linksObject = {
       href: 'http://liceym2.ru/index.php/deyatelnost/uchebnaya-deyatelnost'
     },
     {
-      text: 'Всероссийская олимпиада школьников',
-      href: '/activity/olymp'
+      text: 'Проектная деятельность',
+      href: '/activity/projects'
     },
     {
       text: 'Дополнительное образование',
       href: '/activity/external'
     },
     {
-      text: 'Проектная деятельность',
-      href: '/activity/projects'
+      text: 'Спортивно-массовые мероприятия',
+      href: 'http://liceym2.ru/index.php/deyatelnost/sportivno-massovye-meropriyatiya'
+    },
+    {
+      text: ' Воспитательная работа',
+      href: 'http://liceym2.ru/index.php/deyatelnost/vospitatelnaya-rabota'
+    },
+    {
+      text: 'Экскурсии, походы',
+      href: 'http://liceym2.ru/index.php/deyatelnost/ekskursii-pokhody'
+    },
+    {
+      text: 'Всероссийская олимпиада школьников',
+      href: '/activity/olymp'
+    },
+    {
+      href: 'http://liceym2.ru/index.php/deyatelnost/regionalnaya-innovatsionnaya-ploshchadka',
+      text: 'Региональная инновационная площадка'
+    },
+    {
+      href: 'http://liceym2.ru/index.php/deyatelnost/sovmestnye-meropriyatiya-s-roditelyami',
+      text: 'Совместные мероприятия с родителями'
+    },
+    {
+      href: 'http://liceym2.ru/index.php/deyatelnost/videostudiya',
+      text: 'Видеостудия'
     }
   ],
 

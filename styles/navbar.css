@@ -24,8 +24,17 @@
 
 .nav li a {
   font-size: 0.85rem;
-  line-height: 2;
 }
+
+.nav_list_item,
+.nav_list_item * {
+  line-height: 1.25;
+}
+
+.nav_list_item {
+  margin-bottom: 1rem;
+}
+
 .nav button,
 .nav > a,
 .nav .nav_item > a {
@@ -34,7 +43,7 @@
   color: black;
   padding: 0;
   margin: 0 10px;
-  font-family: 'Golos UI' !important;
+  font-family: 'Golos Text' !important;
 }
 
 .nav button:hover,
@@ -106,6 +115,7 @@
     width: auto;
     background: white;
     border: 1px solid black;
+    top: 0;
   }
   .nav_root_container {
     padding: 0;
