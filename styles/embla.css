@@ -90,3 +90,10 @@
 .embla__button--next {
   right: 27px;
 }
+
+@media (max-width: 900px) {
+  .embla__button {
+    top: unset;
+    bottom: 10%;
+  }
+}
