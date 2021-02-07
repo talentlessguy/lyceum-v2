@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { vertCenter } from '../styles/layout.module.css'
 import * as styles from '../styles/slider.module.css'
 import Slideshow from '../components/Slideshow'
@@ -15,8 +15,24 @@ const parseQ = (x: string | string[]) => parseInt(Array.isArray(x) ? x[0] : x, 1
 const Pagination = ({ count }: { count: number }) => {
   const router = useRouter()
 
-  const current = useMemo(() => parseQ(router.query.page) || 1, [])
+  const [current, set] = useState(1)
 
+  const [initial, setInitial] = useState(true)
+
+  useEffect(() => {
+    if (initial) {
+      set(parseQ(router.query.page) || 1)
+    } else {
+      router.push(
+        `/?page=${current}`,
+        {},
+        {
+          scroll: false
+        }
+      )
+    }
+    setInitial(false)
+  }, [current])
   return (
     <div
       className={vertCenter}
@@ -25,12 +41,12 @@ const Pagination = ({ count }: { count: number }) => {
       }}
     >
       <strong style={{ marginBottom: '0.5rem' }}>
-        Страница {current} из {Math.floor(count / 5) || 1}
+        Страница {current} из {Math.ceil(count / 5) || 1}
       </strong>
 
       <PagesCounter
         onChange={(page) => {
-          router.push(`/?page=${page}`)
+          set(page)
         }}
         total={count}
         pageSize={3}
@@ -141,7 +157,9 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   const page = parseQ(query.page) || 1
 
-  vars = { ...vars, skip: page <= 0 ? vars.limit : (page - 1) * vars.limit }
+  vars = { ...vars, skip: page <= 0 && vars.skip !== (page - 1) * vars.limit ? vars.limit : (page - 1) * vars.limit }
+
+  console.log(vars.skip)
 
   const data = await request({ query: GET_ALL_POSTS, variables: vars })
   return { props: data }

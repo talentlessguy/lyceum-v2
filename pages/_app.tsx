@@ -12,16 +12,15 @@ import '@fontsource/space-grotesk'
 import '../public/font/font.css'
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
-  const router = useRouter()
   useEffect(() => {
     console.log(`%cby v 1 r t l ✨ ~> https://v1rtl.site`, 'font-size: 20px; color: yellow')
-    const handler = () => {
+
+    if (location.pathname !== '/') {
       window.scrollTo({
         top: 0,
         behavior: 'auto'
       })
     }
-    router.events.on('routeChangeComplete', handler)
   }, [])
 
   return (
