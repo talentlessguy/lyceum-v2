@@ -33,7 +33,15 @@ const Post = ({
     {pictures && (
       <div className={imageSet}>
         {pictures?.map((img, i) => (
-          <Image quality={60} height={img.height} width={img.width} src={img.url} key={i} {...imageProps} />
+          <Image
+            objectFit="cover"
+            quality={60}
+            height={img.height}
+            width={img.width}
+            src={img.url}
+            key={i}
+            {...imageProps}
+          />
         ))}
       </div>
     )}
