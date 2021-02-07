@@ -81,6 +81,7 @@ const PostLink = ({ content, id }: { id: number; content: PostProps }) => {
 
 type images = {
   url: string
+  alt: string
 }[]
 
 const Index = ({
@@ -95,7 +96,7 @@ const Index = ({
     count: number
   }
 }) => {
-  const [images, setImages] = useState([])
+  const [images, setImages] = useState<images>([])
 
   useEffect(() => {
     const GET_SLIDER_IMAGES = /* GraphQL */ `
