@@ -1,53 +1,47 @@
 @font-face {
   font-family: 'Golos Text';
-  src: url('/font/Golos-Text_Bold.eot');
-  src: url('/font/Golos-Text_Bold.eot?#iefix') format('embedded-opentype'),
-    url('/font/Golos-Text_Bold.woff2') format('woff2'), url('/font/Golos-Text_Bold.woff') format('woff');
+  src: url('/font/Golos-Text_Bold.woff');
+  src: url('/font/Golos-Text_Bold.woff2') format('woff2'), url('/font/Golos-Text_Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Golos Text';
-  src: url('/font/Golos-Text_Regular.eot');
-  src: url('/font/Golos-Text_Regular.eot?#iefix') format('embedded-opentype'),
-    url('/font/Golos-Text_Regular.woff2') format('woff2'), url('/font/Golos-Text_Regular.woff') format('woff');
+  src: url('/font/Golos-Text_Regular.woff');
+  src: url('/font/Golos-Text_Regular.woff2') format('woff2'), url('/font/Golos-Text_Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Golos UI';
-  src: url('/font/Golos-UI_Regular.eot');
-  src: url('/font/Golos-UI_Regular.eot?#iefix') format('embedded-opentype'),
-    url('/font/Golos-UI_Regular.woff2') format('woff2'), url('/font/Golos-UI_Regular.woff') format('woff');
+  src: url('/font/Golos-UI_Regular.woff');
+  src: url('/font/Golos-UI_Regular.woff2') format('woff2'), url('/font/Golos-UI_Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Golos UI';
-  src: url('/font/Golos-UI_Bold.eot');
-  src: url('/font/Golos-UI_Bold.eot?#iefix') format('embedded-opentype'),
-    url('/font/Golos-UI_Bold.woff2') format('woff2'), url('/font/Golos-UI_Bold.woff') format('woff');
+  src: url('/font/Golos-UI_Bold.woff');
+  src: url('/font/Golos-UI_Bold.woff2') format('woff2'), url('/font/Golos-UI_Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Golos UI';
-  src: url('/font/Golos-UI_Medium.eot');
-  src: url('/font/Golos-UI_Medium.eot?#iefix') format('embedded-opentype'),
-    url('/font/Golos-UI_Medium.woff2') format('woff2'), url('/font/Golos-UI_Medium.woff') format('woff');
+  src: url('/font/Golos-UI_Medium.woff');
+  src: url('/font/Golos-UI_Medium.woff2') format('woff2'), url('/font/Golos-UI_Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Golos Text';
-  src: url('/font/Golos-Text_Medium.eot');
-  src: url('/font/Golos-Text_Medium.eot?#iefix') format('embedded-opentype'),
-    url('/font/Golos-Text_Medium.woff2') format('woff2'), url('/font/Golos-Text_Medium.woff') format('woff');
+  src: url('/font/Golos-Text_Medium.woff');
+  src: url('/font/Golos-Text_Medium.woff2') format('woff2'), url('/font/Golos-Text_Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }

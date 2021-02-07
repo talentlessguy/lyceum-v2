@@ -7,9 +7,6 @@ import 'rc-pagination/assets/index.css'
 import '../styles/navbar.css'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
-import '@fontsource/space-grotesk'
-import '../public/font/font.css'
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
@@ -55,6 +52,7 @@ const CustomApp = ({ Component, pageProps }: AppProps) => {
       </style>
       <Head>
         <title>МБОУ Лицей №2</title>
+
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" type="image/png" href="/icon.png" />
         <link rel="favicon" href="/favicon.ico" />

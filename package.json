@@ -17,7 +17,6 @@
   "author": "v1rtl",
   "license": "ISC",
   "dependencies": {
-    "@fontsource/space-grotesk": "^4.1.1",
     "@openfonts/arimo_cyrillic": "^1.44.2",
     "clsx": "^1.1.1",
     "graphql": "^15.5.0",
