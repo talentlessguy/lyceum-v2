@@ -32,7 +32,7 @@ const NextButton = ({ enabled, onClick }) => (
   </button>
 )
 
-const AUTOPLAY_INTERVAL = 5000
+const AUTOPLAY_INTERVAL = 3000
 
 const Slideshow = ({ images }: { images: { url: string; alt: string }[] }) => {
   const [ref, embla] = useEmblaCarousel({
