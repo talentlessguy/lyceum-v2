@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: 'Golos Text';
-  src: url('/font/Golos-Medium.woff');
-  src: url('/font/Golos-Medium.woff2') format('woff2'), url('/font/Golos-Medium.woff') format('woff');
+  src: url('/font/Golos-Text_Medium.woff');
+  src: url('/font/Golos-Text_Medium.woff2') format('woff2'), url('/font/Golos-Text_Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
