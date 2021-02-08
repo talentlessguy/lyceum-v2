@@ -102,7 +102,7 @@ const Index = ({
     const GET_SLIDER_IMAGES = /* GraphQL */ `
       {
         allUploads(filter: { tags: { eq: "slider" } }) {
-          responsiveImage(imgixParams: { q: 60 }) {
+          responsiveImage {
             srcSet
             webpSrcSet
             sizes
