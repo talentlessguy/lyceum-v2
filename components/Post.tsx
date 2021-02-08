@@ -35,7 +35,7 @@ const Post = ({
         {pictures?.map((img, i) => (
           <Image
             objectFit="cover"
-            quality={60}
+            quality={headingLevel === 1 ? 60 : 40}
             height={img.height}
             width={img.width}
             src={img.url}
