@@ -15,8 +15,7 @@ export function request<T = unknown>({
   const client = new GraphQLClient(endpoint, {
     headers: {
       authorization: `Bearer ${TOKEN}`
-    },
-    cache: 'force-cache'
+    }
   })
   return client.request<T>(query, variables)
 }
