@@ -7,7 +7,7 @@
     "dev": "next"
   },
   "browserslist": [
-    ">0.1%",
+    ">0.2%",
     "last 3 versions",
     "not dead",
     "not op_mini all",
