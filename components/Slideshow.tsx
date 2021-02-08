@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Image } from 'react-datocms'
 import Carousel from 'nuka-carousel'
 import { image, slides, slider_btn } from '../styles/slider.module.css'
@@ -20,6 +20,16 @@ const NextButton = (props) => (
 )
 
 const Slideshow = ({ images }: { images: any[] }) => {
+  // const [width, set] = useState(1920)
+
+  // useEffect(() => {
+  //   const listener = () => set(window.innerWidth)
+
+  //   window.addEventListener('resize', listener)
+
+  //   return () => window.removeEventListener('resize', listener)
+  // }, [])
+
   return (
     <Carousel
       speed={1450}
@@ -35,7 +45,7 @@ const Slideshow = ({ images }: { images: any[] }) => {
       )}
     >
       {images.map((img, i) => (
-        <Image className={image} data={img.responsiveImage} key={i} />
+        <Image explicitWidth className={image} data={{ ...img.responsiveImage, width: '100%' }} key={i} />
       ))}
     </Carousel>
   )
