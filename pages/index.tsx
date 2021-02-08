@@ -201,8 +201,6 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
   vars = { ...vars, skip: page <= 0 && vars.skip !== (page - 1) * vars.limit ? vars.limit : (page - 1) * vars.limit }
 
-  console.log(vars.skip)
-
   const data = await request({ query: GET_ALL_POSTS, variables: vars })
   return { props: data }
 }

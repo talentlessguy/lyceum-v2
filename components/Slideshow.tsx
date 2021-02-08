@@ -20,8 +20,6 @@ const NextButton = (props) => (
 )
 
 const Slideshow = ({ images }: { images: any[] }) => {
-  console.log(images)
-
   return (
     <Carousel
       speed={1450}
