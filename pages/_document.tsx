@@ -8,8 +8,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link href="/font/font.css" rel="stylesheet" />
-
           {fonts.map((font) => (
             <>
               <link rel="preload" href={`/font/${font}.woff2`} as="font" crossOrigin="" />

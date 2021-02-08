@@ -8,6 +8,7 @@ import '../styles/navbar.css'
 import Footer from '../components/Footer'
 import { AppProps } from 'next/app'
 import '../styles/slider.css'
+import '../public/font/font.css'
 
 const CustomApp = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
