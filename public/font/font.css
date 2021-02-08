@@ -17,6 +17,15 @@
 }
 
 @font-face {
+  font-family: 'Golos Text';
+  src: url('/font/Golos-Medium.woff');
+  src: url('/font/Golos-Medium.woff2') format('woff2'), url('/font/Golos-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Golos UI';
   src: url('/font/Golos-UI_Regular.woff');
   src: url('/font/Golos-UI_Regular.woff2') format('woff2'), url('/font/Golos-UI_Regular.woff') format('woff');

@@ -11,8 +11,6 @@ export default function Footer() {
       <p>Лицей №2</p>
       <p>Московская область, город Протвино, улица Гагарина, д.7</p>
       <p>Copyright © {new Date().getFullYear()}</p>
-
-      {router.pathname === '/' && <ExternalLink href="https://v1rtl.site">v1rtl</ExternalLink>}
     </footer>
   )
 }
