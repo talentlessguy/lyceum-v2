@@ -1,6 +1,7 @@
 dependencies:
   '@openfonts/arimo_cyrillic': 1.44.2
   clsx: 1.1.1
+  core-js: 3.8.3
   graphql: 15.5.0
   graphql-request: 3.4.0_graphql@15.5.0
   next: 10.0.7-canary.5_ab3b038e05c538ef0eed5445ef5f8b90
@@ -2395,6 +2396,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1sCb0wBXnBIL16pfFG1Gkvei6UzvKyTNYpiC41yrdjEv0UoJoq9E/abTMzyYJ6JpTkAj15dLjbqifIzEBDVvog==
+  /core-js/3.8.3:
+    dev: false
+    requiresBuild: true
+    resolution:
+      integrity: sha512-KPYXeVZYemC2TkNEkX/01I+7yd+nX3KddKwZ1Ww7SKWdI2wQprSgLmrTddT8nw92AjEklTsPBoSdQBhbI1bQ6Q==
   /core-util-is/1.0.2:
     resolution:
       integrity: sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
@@ -7232,6 +7238,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^4.14.2
   '@typescript-eslint/parser': ^4.14.2
   clsx: ^1.1.1
+  core-js: '3'
   eslint: ^7.19.0
   eslint-plugin-react: ^7.22.0
   eslint-plugin-react-hooks: ^4.2.0
