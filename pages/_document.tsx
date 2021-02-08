@@ -6,7 +6,7 @@ const fonts = ['Golos-Text_Bold', 'Golos-Text_Medium', 'Golos-Text_Regular', 'Go
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="ru">
         <Head>
           {fonts.map((font) => (
             <>
