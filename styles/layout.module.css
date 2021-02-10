@@ -68,10 +68,16 @@
   line-height: 1.75;
 }
 
+.floatImage {
+  float: left;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
 @media (max-width: 800px) {
   .main {
     grid-column: 1 / 4;
-    padding: 0.75rem;
+    padding: 2rem;
   }
   .grid {
     grid-template-rows: auto auto;
@@ -90,6 +96,15 @@
   .sidebar_left {
     border-right: 2px solid black;
   }
+  .floatImage {
+    float: unset;
+  }
+}
+
+@media (max-width: 350px) {
+  .main {
+    padding: 0;
+  }
 }
 
 .main h1 {
@@ -101,10 +116,4 @@
 
 .main h1 {
   text-align: center;
-}
-
-.floatImage {
-  float: left;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
 }

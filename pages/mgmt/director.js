@@ -8,25 +8,37 @@ const Director = () => (
       {`
         .bio {
           display: inline-flex;
+          flex-flow: row wrap;
+          padding-top: 2rem;
         }
         .bio .text {
-          padding: 1rem;
+          padding: 3rem;
           padding-top: 0;
           max-width: 750px;
         }
         .bio .text p:first-of-type {
           margin-top: 0;
         }
+        @media (max-width: 1450px) {
+          .director {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+          }
+        }
       `}
     </style>
     <div className="bio">
-      <Image
-        layout="fixed"
-        width={200}
-        height={300}
-        objectFit="contain"
-        src="https://img-fotki.yandex.ru/get/41717/227958524.f/0_1e1a93_d396e4b0_L.jpg"
-      />
+      <div className="director">
+        <Image
+          layout="fixed"
+          width={200}
+          height={300}
+          objectFit="contain"
+          src="https://img-fotki.yandex.ru/get/41717/227958524.f/0_1e1a93_d396e4b0_L.jpg"
+        />
+      </div>
       <div className="text">
         <p>
           <span></span>&nbsp;<strong>Директор МБОУ &quot;Лицей №2&quot; Иващенко Людмила Ивановна</strong>

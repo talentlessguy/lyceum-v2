@@ -24,7 +24,7 @@ const Achievements = ({ images }: Props) => (
       {images.map(({ url, title, width, height }) => (
         <Post
           key={title}
-          images={[
+          pictures={[
             {
               url,
               width: width,

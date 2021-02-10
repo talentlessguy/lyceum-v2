@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import ExternalLink from '../../components/ExternalLink'
 import Layout from '../../components/Layout'
+import { iframe } from '../../styles/iframe.module.css'
 
 const Projects = () => (
   <Layout>
@@ -23,8 +24,7 @@ const Projects = () => (
         src="https://www.youtube.com/embed/8F0Kaqvkjxs"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen=""
-        width="560"
-        height="315"
+        className={iframe}
         frameBorder="0"
       ></iframe>
     </div>
