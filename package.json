@@ -12,7 +12,8 @@
     "not dead",
     "not op_mini all",
     "not ie 11",
-    "not edge <= 18"
+    "not edge <= 18",
+    "chrome >= 50"
   ],
   "keywords": [],
   "author": "v1rtl",
