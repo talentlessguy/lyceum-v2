@@ -48,8 +48,8 @@ const NavBar = () => {
   const [vis, set] = useState(false)
 
   useEffect(() => {
-    set(window.innerWidth > 1500)
-    const listener = () => void set(window.innerWidth > 1500)
+    set(window.innerWidth > 1260)
+    const listener = () => void set(window.innerWidth > 1260)
 
     window.addEventListener('resize', listener)
 
